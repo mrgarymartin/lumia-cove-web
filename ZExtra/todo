@@ -1,0 +1,33 @@
+TODO
+-------------------
+-------------------
+
+* Account page with
+	- time left for subscription
+	- Renew button
+	- Buy Premium button
+
+Subscriptions
+
+* Start download after subscription
+* Have coupon text box
+
+* Integrations icons on home page
+
+* Footer with social links
+
+* Update firebase twitter header in index.html
+
+Backlog
+-------------------
+-------------------
+* Privacy page
+* Terms of use page
+* Intro Video
+* LC-Loader
+
+Done
+-------------------
+-------------------
+* Need to setup auth on site
+* Don't allow already subscribed users to the checkout page, have a notification that they already have an account

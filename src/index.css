@@ -1,14 +1,338 @@
-body {
-  margin: 0;
-  padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+  /* Colors */
+  --main: #19171c;
+  --buttonBg: #0e9dd9;
+  --hover: #0e9dd9;
+
+  /* Stream */
+  --streamPink: #ff00ff; 
+  --streamWhite: #ffffff; 
+  --streamDark: #19171c;
+  --streamDarkTransparent: rgba(9.8%, 9%, 11%, .4);
+  --streamBlue:#0e9dd9; 
+  --streamBlack: #000000;
+
+  /* Twitch */
+  --twitchPurple: #6441a5; 
+  --twitchWhite: #ffffff; 
+  --twitchDark: #19171c;
+  --twitchDarkTransparent: rgba(9.8%, 9%, 11%, .4);
+  --twitchBlue:#0e9dd9; 
+  --twitchBlack: #000000;
+
+  /* Mixer */
+  --mixerMain: #1FBAED; 
+  --mixerWhite: #ffffff; 
+  --mixerDark: #03214F;
+  --mixerDarkTransparent: rgba(3, 33, 79, .4);
+  --mixerBlue:#0e9dd9; 
+  --mixerBlack: #000000;
+
+  /* Tube */
+  --tubeMain: #E62117; 
+  --tubeWhite: #ffffff; 
+  --tubeDark: #19171c;
+  --tubeDarkTransparent: rgba(9.8%, 9%, 11%, .4);
+  --tubeBlue:#0e9dd9; 
+  --tubeBlack: #000000;
+
+  /* Sizes */
+  --lampSize: 400px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+ * , *:before, *:after { 
+      margin: 0;
+      padding: 0;
+      border: 0;
+     box-sizing:border-box; 
+     -moz-box-sizing:border-box; 
+     -webkit-box-sizing:border-box; 
+     -ms-box-sizing:border-box;
+   }
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.link {
+	text-decoration: underline;
+}
+
+.twitch-link, .mixer-link, .youtube-link {
+    text-decoration: underline;
+}
+
+.title {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: var(--main);
+}
+
+.sub-title {
+    font-size: 1.4rem;
+    margin-bottom: 40px;
+    color: var(--main);
+}
+
+.warning-title {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    color: red;
+}
+
+body {
+  background-color: var(--twitchDark);
+  font-size: 18px;
+  line-height: 25px;
+  width: 100%;
+  overflow-x: hidden;
+  font-family: 'Archivo', sans-serif;
+  min-height: 100vh;
+}
+
+#app {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: var(--twitchWhite);
+  min-height: 100vh;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.info-bar {
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin-bottom: 60px;
+}
+
+/* // LOGO */
+.logo-text {
+		text-align: center;
+		font-size: calc(5vw + 35px);
+		margin-bottom: 50px;
+		text-transform: uppercase;
+}
+
+.logo-image {
+		user-select: none;
+		color: white;
+}
+
+.logo-letter {
+		--shad1: 5px;
+		--shad2: 10px;
+		--shad3: 15px;
+		--shad4: 20px;
+		text-shadow: 0px 0px var(--shad1) var(--col), 0px 0px var(--shad2) var(--col), 0px 0px var(--shad3) var(--col), 0px 0px var(--shad4) var(--col);
+}
+  
+  .logo-letter:nth-child(1) {
+      --col: #00bfff;
+  }
+
+  .logo-letter:nth-child(2) {
+      --col: #cf3d3d;
+  }
+  .logo-letter:nth-child(3){
+      --col: #d5d53b;
+  }
+  .logo-letter:nth-child(4){
+      --col: #26a126;
+  }
+
+  .logo-letter:nth-child(5){
+      --col: #db9920;
+  }
+
+  .logo-stream {
+      --col: var(--streamPink);
+      color: var(--col);
+  }
+
+  .logo-mixer {
+      --col: var(--mixerMain);
+      color: var(--col);
+  }
+
+  .logo-tube {
+      --col: var(--tubeMain);
+      color: var(--col);
+  }
+
+/* ********* */
+
+.paypal-button-text {
+    color: white !important;
+}
+
+.head-title {
+  text-align: center;
+  position: relative;
+  color: white;
+  font-size: 2rem;
+}
+
+.head-border {
+  width: 80%;
+  background-color: white;
+  height: 1px;
+  margin: 15px 0 20px 0;
+}
+
+.description-contain {
+  padding-left: 260px;
+  
+}
+
+.description {
+  padding: 0 10px;
+}
+
+.sub-description-contain {
+  width: 100%;
+}
+
+.sub-description {
+  font-family: 'Archivo', sans-serif;
+  text-align: center;
+  font-size: 1.4rem;
+  line-height: 30px;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:focus {
+    outline:0;
+    /* box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #228dff; */
+}
+
+button:active {
+  filter: brightness(50%);
+}
+
+.main-button {
+  color: white;
+  font-size: 1.3rem;
+  font-weight: bold;
+  letter-spacing: 3px;
+  /* font-family: 'Archivo Black', sans-serif; */
+  background-color: var(--streamPink);
+  text-transform: uppercase;
+  padding: 10px 20px;
+  border-radius: 30px;
+}
+
+.main-button {
+  color: white;
+  font-size: 1.3rem;
+  font-weight: bold;
+  letter-spacing: 3px;
+  /* font-family: 'Archivo Black', sans-serif; */
+  /* background-color: var(--streamPink); */
+  text-transform: uppercase;
+  padding: 10px 20px;
+  border-radius: 30px;
+}
+
+.twitch-main-button {
+  background-color: var(--streamPink);
+}
+
+.mixer-main-button {
+  background-color: var(--mixerMain);
+}
+
+.tube-main-button {
+  background-color: var(--tubeMain);
+}
+
+.twitch-link, .mixer-link, .youtube-link, .email-link {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.twitch-link:hover, .mixer-link:hover, .youtube-link:hover, .email-link:hover {
+  color: var(--hover);
+}
+
+.platform-contain {
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+}
+
+.switch-button {
+    background-color: white;
+    color: var(--main);
+    padding: 5px 20px;
+    font-size: 1.1rem;
+}
+
+.switch-button[disabled] {
+  background-color: whitesmoke;
+  cursor: no-drop;
+  /* color: gray; */
+}
+
+.switch-button.active {
+    background-color: var(--main);
+    border: white solid .5px;
+    color: white;
+}
+
+/* Desktop */
+@media (min-width: 476px) {
+
+}
+
+@media (max-width: 840px) {
+  body {
+        font-size: 14px;
+    }
+
+    .main-button {
+      font-size: 1.1rem;
+      letter-spacing: 2px;
+    }
+    
+    .head-title {
+      font-size: 1.6rem;
+    }
+
+    .sub-description {
+      font-size: 1.2rem;
+    }
+}
+
+/* Mobile */
+@media (max-width: 475px) {
+  :root {
+    --lampSize: 100px;
+  }
+
+  body {
+        font-size: 12px;
+    }
+}
+
+/* < Mobile */
+@media (max-width: 319px) {
+  :root {
+    --lampSize: 100px;
+  }
 }

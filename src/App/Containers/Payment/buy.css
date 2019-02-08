@@ -1,0 +1,3 @@
+.braintree-show-options [data-braintree-id="choose-a-way-to-pay"] {
+	visibility: hidden;
+}

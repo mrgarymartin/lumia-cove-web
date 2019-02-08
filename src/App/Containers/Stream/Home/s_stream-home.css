@@ -1,0 +1,221 @@
+.lumia-page {
+		padding: 40px 10px 0px 10px; 
+		font-family: 'Archivo Black', sans-serif;  
+		background: var(--main);
+		color: white;
+}
+
+.main-button {
+		color: white;
+		font-size: 1.3rem;
+		font-weight: bold;
+		letter-spacing: 3px;
+		/* font-family: 'Archivo Black', sans-serif; */
+		background-color: var(--streamPink);
+		text-transform: uppercase;
+		padding: 10px 20px;
+		border-radius: 30px;
+}
+
+#twitch-page {
+		padding: 0 5%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-around;
+}
+
+.top-contain {
+		margin-bottom: 60px;
+}
+
+.description {
+		text-align: center;
+		font-size: calc(1vw + 10px);
+		text-transform: uppercase;
+}
+
+.buy-button {
+		margin-bottom: 80px;
+		width: 80%;
+		padding: 20px 0;
+}
+
+.active {
+		flex-direction: row;
+}
+
+.coming-text {
+		font-size: 2rem;
+}
+.quote-contain {
+		display: flex;
+		justify-content: center;
+}
+
+.button-contain {
+		width: 100%;
+		display: flex;
+		justify-content: space-around;
+}
+
+.video-contain {
+		margin: 20px 0;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+}
+
+.video-title {
+		color: white;
+		font-size: 2rem;
+		margin-bottom: 20px;
+}
+
+.video-holder {
+		height: 60vw;
+		max-height: 800px;
+		width: 100%;
+}
+
+.platform-contain {
+		margin-bottom: 60px;
+		font-size: 1.4rem;
+}
+
+/* Desktop */
+@media (min-width: 476px) {
+
+}
+
+/* Tablet */
+@media (max-width: 840px) {
+.platform-contain {
+		font-size: 1.2rem;
+}
+}
+
+/* Mobile */
+@media (max-width: 650px) {
+.lt-page {
+		padding: 80px 10px 20px 10px; 
+}
+
+.top-contain {
+		margin-bottom: 20px;
+}
+
+.logo-text {
+		font-size: calc(4vw + 20px);
+		margin-bottom: 15px;
+}
+
+.logo-letter {
+		--shad1: 5px;
+		--shad2: 5px;
+		--shad3: 5px;
+		--shad4: 10px;
+		text-shadow: 0px 0px var(--shad1) var(--col), 0px 0px var(--shad2) var(--col), 0px 0px var(--shad3) var(--col);
+}
+
+.description {
+		font-size: calc(1vw + 6px);
+}
+
+.video-holder {
+}
+}
+
+@media (max-width: 360px) {
+.logo-text {
+		font-size: calc(2vw + 25px);
+}
+}
+
+/* < Mobile */
+@media (max-width: 319px) {
+
+}
+
+
+/* About */
+#about-page {
+		width: 80%;
+		margin: auto;
+		margin-bottom: 60px;
+}
+
+/* How */
+#how-page {
+	width: 80%;
+	margin: auto;
+	margin-bottom: 80px;
+}
+
+/* Features */
+#features-page {
+}
+
+ul {
+		list-style: square;
+}
+
+.feature-set {
+		margin-bottom: 15px;
+		text-align: left;
+		display: flex;
+		justify-content: space-around;        
+}
+
+.feature-set:last-child {
+		margin-bottom: 0;
+}
+
+.feature {
+		width: 30%;
+}
+
+.feature:first-of-type {}
+
+/* Support */
+#t-support-page {
+		height: 100vh;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+}
+.email {
+		margin-top: 30px;
+		font-size: 2rem;
+}
+
+/* Help */
+#help-page {
+     
+}
+
+.head-title {
+		color: var(--main);
+}
+
+/* Bottom */
+#bottom-page {
+     
+}
+
+.info-bar {
+			color: ghostwhite;
+}
+
+.sub-description-contain {
+		padding-bottom: 20px;
+}
+
+.buy-button {
+		margin-top: 40px;
+		width: 80%;
+		padding: 20px 0;
+}
