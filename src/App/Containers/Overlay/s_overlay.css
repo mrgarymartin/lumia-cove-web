@@ -1,0 +1,73 @@
+body {
+  background: transparent;
+}
+
+#LumiaOverlayPage {
+  height: 100vh;
+  line-height: normal;
+}
+
+#LumiaOverlay {
+  margin: 0;
+  padding: 0;
+  background: transparent;
+}
+
+#LumiaOverlaySignup {
+  transition: all .1s ease;
+  padding-top: 60px;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  color: var(--twitchDark);
+  flex-direction: column;
+}
+
+.error-message {
+  height: 22px;
+  color: red;
+  font-size: 20px;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.overlay-title {
+  margin-bottom: 40px;
+}
+
+#room-input {
+  margin-top: 20px;
+  font-size: 2vw;
+  padding: 5px 10px;
+  border: 2px solid var(--twitchDark);
+  border-radius: 5px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.overlay-enter {
+  padding: 6px 40px;
+  border: 2px solid var(--twitchDark);
+  border-radius: 5px;
+  color: var(--twitchDark);
+  font-size: 1vw;
+  font-weight: bold;
+}
+
+.overlay-enter:active {
+  background: var(--twitchDark);
+  color: white;
+  filter: none;
+}
+
+.overlay-contain {
+}
+
+.powered-contain {
+  /* display: flex; */
+}
+
+span {
+  display: inline;
+}

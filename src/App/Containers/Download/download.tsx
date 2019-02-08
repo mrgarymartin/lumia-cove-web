@@ -8,7 +8,7 @@ import LumiaRequest from '../../Shared/Helpers/LumiaRequest';
 import { SwitchRow, SwitchButton } from '../Auth/s_auth';
 import { toast } from 'react-toastify';
 
-class Download extends React.Component<any> {
+class Download extends React.Component<any, any> {
   state = {
     link: null,
 		platform: null,
