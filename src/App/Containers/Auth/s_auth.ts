@@ -107,7 +107,7 @@ export const Label: any = styled.label`
 export const InputField: any = styled.input`
     text-align:center;
     font-size:1.15rem;
-    width:200px;
+    width: 300px;
     color: ${Colors.main};
     &:focus{
         outline-color: ${Colors.main};

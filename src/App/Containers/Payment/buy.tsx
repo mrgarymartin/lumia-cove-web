@@ -12,6 +12,7 @@ import { Timeout, Clear } from 'bettertimers';
 
 import { toast } from 'react-toastify';
 import { URLS } from '../../Shared/Helpers/LumiaRequest';
+import LoaderMask from '../../Shared/Components/loaderMask';
 
 const plans = [
 	{ id: 'streamMonthlyPlan', price: '3.99/month', coupon: 'streamLegacyMonthlyCoupon' },
@@ -30,6 +31,7 @@ class Buy extends React.Component<any> {
 		paid: null,
 		coupon: '',
 		error: null,
+		loading: false,
   };
 
   async componentDidMount() {
@@ -62,11 +64,10 @@ class Buy extends React.Component<any> {
   }
 
   async buy() {
+		this.setState({ error: null, loading: true });
 		const plan = this.state.plan;
 		console.log('Buying with plan', plan);
 		console.log('instance: ', this.instance);
-
-		this.setState({ error: null });
 
 		if (this.instance) {
 			try {
@@ -86,6 +87,8 @@ class Buy extends React.Component<any> {
 				this.setState({ error: `Ran into an error checking out: ${err.message ? err.message : null}` }, this.cancelError);
 			}
 		}
+
+		this.setState({ loading: false });
   }
 
 	switchPlan = (plan) => {
@@ -106,7 +109,7 @@ class Buy extends React.Component<any> {
 	}
 
   render() {
-		const { plan, clientToken, paypal, coupon, paid, error } = this.state;
+		const { plan, clientToken, paypal, coupon, paid, error, loading } = this.state;
 
       return (
         <BuyPage>
@@ -140,6 +143,8 @@ class Buy extends React.Component<any> {
 								<Button style={{ marginTop: '20px' }} disabled={!clientToken} onClick={this.buy.bind(this)}>Checkout</Button>
 							</Fragment>
 					}
+
+					{loading && <LoaderMask />}
         </BuyPage>
       );
     }

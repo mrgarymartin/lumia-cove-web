@@ -8,6 +8,7 @@ import { LoginAuthButton, LoginAuthButtonIcon } from '../../Shared/Styles/s_butt
 import LumiaRequest, { URLS } from '../../Shared/Helpers/LumiaRequest';
 // import Images from '@Images';
 import { toast } from 'react-toastify';
+import LoaderMask from '../../Shared/Components/loaderMask';
 
 class Auth extends React.Component<any, any> {
 	emailInputRef: any;
@@ -188,7 +189,6 @@ class Auth extends React.Component<any, any> {
 
       return (
 				<AuthPage>
-
 					<SwitchRow>
 						<SwitchButton on={login} name="login" onClick={this.switchAccount}>Login</SwitchButton>
 						<SwitchButton on={!login} name="signup" onClick={this.switchAccount}>Register</SwitchButton>
@@ -253,6 +253,8 @@ class Auth extends React.Component<any, any> {
 							</LoginBox>
 						</LoginContain>
 					</AuthBox>
+
+					{loading && <LoaderMask />}
 				</AuthPage>
       );
     }
