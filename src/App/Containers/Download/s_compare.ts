@@ -63,7 +63,7 @@ export const GetButton: any = styled.button`
 	width: 100px;
 	cursor: ${(props: any) => props.disabled ? 'no-drop' : 'pointer'};
 	font-size: .8rem;
-	background: ${props => props.color ? props.color : 'dimgray'};
+	background: ${(props: any) => props.color ? props.color : 'dimgray'};
 	border: solid 1px white;
 	color: white;
 	padding: 3px 10px;

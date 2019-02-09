@@ -30,13 +30,9 @@ process.on('unhandledRejection', (error) => {
 ReactDOM.render(
 	<Provider store={store().store}>
 		<PersistGate loading={null} persistor={store().persistor}>
-			{process.env.NODE_ENV !== 'production'
-				? <BrowserRouter>
+				<BrowserRouter>
 					<App />
 				</BrowserRouter>
-				: <MemoryRouter>
-					<App />
-				</MemoryRouter>
 			}
 		</PersistGate>
 		</Provider>
