@@ -123,8 +123,31 @@ body {
 .logo-text {
 		text-align: center;
 		font-size: calc(5vw + 35px);
-		margin-bottom: 50px;
+		margin-bottom: .7em;
 		text-transform: uppercase;
+}
+
+
+/* Mobile */
+@media (max-width: 650px) {
+	.logo-text {
+			font-size: calc(4vw + 20px);
+			/* margin-bottom: 15px; */
+	}
+
+	.logo-letter {
+			--shad1: 5px;
+			--shad2: 5px;
+			--shad3: 5px;
+			--shad4: 10px;
+			text-shadow: 0px 0px var(--shad1) var(--col), 0px 0px var(--shad2) var(--col), 0px 0px var(--shad3) var(--col);
+	}
+}
+
+@media (max-width: 360px) {
+	.logo-text {
+			font-size: calc(2vw + 25px);
+	}
 }
 
 .logo-image {
