@@ -4,6 +4,7 @@ import io from 'socket.io-client';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import axios from 'axios';
+import './s_overlay.css';
 
 class Overlay extends React.Component<any, any> {
   state = {
@@ -44,18 +45,19 @@ class Overlay extends React.Component<any, any> {
 	};
 
   componentDidMount() {
-		console.log('Router', this.props.history);
-    // if(this.props.history.location.query.room){
-		// 	// TODO put room in
-    //   this.setState({ room: this.$route.query.room });
-    //   this.connect();
-    // }
+    if(this.props.history.location.search) {
+			let room = this.props.history.location.search.match(/room=(\w+)/)[1];
+			if (room) {
+      	this.setState({ room });
+      	this.connect();
+			}
+    }
 	}
 
 	connect = () => {
 		if(this.state.room) {
 			console.log('Room', this.state.room)
-			// const socket = io.connect('http://localhost:7650', {
+			// const socket = io.connect('http://localhost:6788', {
 			const socket = io.connect('https://api.lumiacove.com', {
 				'reconnection': true,
 				'reconnectionDelay': 500,
@@ -100,7 +102,7 @@ class Overlay extends React.Component<any, any> {
 	}
 
   render() {
-		const { room, config, errorMsg } = this.state;
+		const { inputRoom, room, config, errorMsg } = this.state;
 
       return (
 				<div id='LumiaOverlayPage'>
@@ -111,24 +113,24 @@ class Overlay extends React.Component<any, any> {
 									}
 									{config.type == 2 &&
 										<div className='overlay-contain' style={{ textAlign: 'right', position: 'absolute', bottom: config.poweredConfig.bottom, top: config.poweredConfig.top, right: config.poweredConfig.right, left: config.poweredConfig.left, fontSize: config.poweredConfig.fontSize, opacity: config.poweredConfig.opacity }} >
-											{/* <div className='powered-contain'>
+											<div className='powered-contain'>
 												<span style={{ color: config.poweredConfig.colors[0], textShadow: config.poweredConfig.shadow.on ? `${config.poweredConfig.colors[0]} ${config.poweredConfig.shadow.horizontal} ${config.poweredConfig.shadow.vertical} ${config.poweredConfig.shadow.blur}` : '' }}>Powe</span>
 												<span style={{ color: config.poweredConfig.colors[1], textShadow: config.poweredConfig.shadow.on ? `${config.poweredConfig.colors[1]} ${config.poweredConfig.shadow.horizontal} ${config.poweredConfig.shadow.vertical} ${config.poweredConfig.shadow.blur}` : '' }}>red by</span> 
-											</div> */}
-											{/* <div className='powered-contain'>
+											</div>
+											<div className='powered-contain'>
 												<span style={{ color: config.poweredConfig.colors[2], textShadow: config.poweredConfig.shadow.on ? `${config.poweredConfig.colors[2]} ${config.poweredConfig.shadow.horizontal} ${config.poweredConfig.shadow.vertical} ${config.poweredConfig.shadow.blur}` : '' }}>Lum</span>
 												<span style={{ color: config.poweredConfig.colors[3], textShadow: config.poweredConfig.shadow.on ? `${config.poweredConfig.colors[3]} ${config.poweredConfig.shadow.horizontal} ${config.poweredConfig.shadow.vertical} ${config.poweredConfig.shadow.blur}` : '' }}>ia</span>
-											</div> */}
+											</div>
 										</div>
 									}
 							</div>
 
-						: <div v-else id='LumiaOverlaySignup'>
-								<h1 className='overlay-title'>Lumia Overlay Beta</h1>
+						: <div id='LumiaOverlaySignup'>
+								<h1 className='overlay-title'>Lumia Overlay</h1>
 								<div className='error-message'>{ errorMsg }</div>
 								<h3>Enter your room number</h3>
 								{/* <input type='text' name='room' id='room-input' v-model='inputRoom' placeholder='Room number' maxlength='20' @keyup='errorMsg=''' @keyup.enter='switchRoom'> */}
-								<input type='text' name='room' id='room-input' v-model='inputRoom' placeholder='Room number' maxLength={ 20 } />
+								<input type='text' name='room' id='room-input' onChange={(e) => this.setState({ inputRoom: e.target.value })} value={inputRoom} placeholder='Room number' maxLength={ 20 } />
 								<button className='overlay-enter' onClick={ this.switchRoom }>Enter</button>
 							</div>
 					}

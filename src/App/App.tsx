@@ -1,6 +1,7 @@
 // React and Redux
 import React from 'react';
 import Routes from './Routes';
+import { withRouter } from 'react-router-dom';
 
 // Modules
 import ScrollToTop from './Shared/Components/scrollToTop';
@@ -17,7 +18,7 @@ import { ToastContainer, Bounce, ToastPosition } from 'react-toastify';
 // 3rd Party
 import 'react-toastify/dist/ReactToastify.css';
 
-const App = () => (
+const App = (props) => (
 		<Body className='app' >
 			<IconContext.Provider value={{ className: 'react-icons' }} />
 			<ToastContainer
@@ -28,12 +29,13 @@ const App = () => (
 				closeButton={false}
 			/>
 			<ScrollToTop>
-				<NavigationBar />
+				{!props.history.location.pathname.includes('overlay') && <NavigationBar />}
 				<div style={{ marginBottom: '90px' }} />
 					<Routes />
-				<Footer />
+				{!props.history.location.pathname.includes('overlay') && <Footer />}
+				
 			</ScrollToTop>
 		</Body>
 );
 
-export default App;
+export default withRouter(App);

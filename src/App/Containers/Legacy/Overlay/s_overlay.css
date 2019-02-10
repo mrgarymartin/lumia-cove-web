@@ -1,9 +1,6 @@
-body {
-  background: transparent;
-}
-
 #LumiaOverlayPage {
   height: 100vh;
+	color: white;
   line-height: normal;
 }
 
@@ -20,7 +17,7 @@ body {
   width: 100vw;
   display: flex;
   align-items: center;
-  color: var(--twitchDark);
+  color: white;
   flex-direction: column;
 }
 
