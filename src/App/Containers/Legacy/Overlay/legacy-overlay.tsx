@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import axios from 'axios';
 
-class Overlay extends React.Component<any, any> {
+class LegacyOverlay extends React.Component<any, any> {
   state = {
 		room: '',
 		inputRoom: '',
@@ -55,8 +55,8 @@ class Overlay extends React.Component<any, any> {
 	connect = () => {
 		if(this.state.room) {
 			console.log('Room', this.state.room)
-			// const socket = io.connect('http://localhost:7650', {
-			const socket = io.connect('https://api.lumiacove.com', {
+			// const socket = io.connect('http://localhost:6788', {
+			const socket = io.connect('https://legacy.api.lumiacove.com', {
 				'reconnection': true,
 				'reconnectionDelay': 500,
 				'reconnectionAttempts': 1000
@@ -144,4 +144,4 @@ const mapState = (state) => {
 	return copyState;
 };
 
-export default withRouter(connect<any, any, any>(mapState, null)(Overlay));
+export default withRouter(connect<any, any, any>(mapState, null)(LegacyOverlay));
