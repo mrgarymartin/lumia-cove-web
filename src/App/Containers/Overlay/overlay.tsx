@@ -4,7 +4,7 @@ import io from 'socket.io-client';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import axios from 'axios';
-import './s_overlay.css';
+import '../../Shared/Styles/s_overlay.css'
 
 class Overlay extends React.Component<any, any> {
   state = {
@@ -81,12 +81,12 @@ class Overlay extends React.Component<any, any> {
 			});
 
 			socket.on('change-background', (config) => {
-				console.log('Color Config', config)
+				console.log('Change-background', config)
 				const stateConfig = this.state.config;
-				if(this.state.config.type == 1) {
+				if (this.state.config.type == 1) {
 					stateConfig.barConfig.background = `linear-gradient(90deg, ${config.colors[0]}, ${config.colors[1]}, ${config.colors[2]}, ${config.colors[3]})`
 					stateConfig.barConfig.colors = config.colors;
-				} else if (this.state.config.type == 2){
+				} else if (this.state.config.type == 2) {
 					stateConfig.poweredConfig.colors = config.colors
 				}
 				

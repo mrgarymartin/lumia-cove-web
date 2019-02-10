@@ -4,7 +4,7 @@ import io from 'socket.io-client';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import axios from 'axios';
-import './s_overlay.css';
+import '../../../Shared/Styles/s_overlay.css';
 
 class LegacyOverlay extends React.Component<any, any> {
   state = {
