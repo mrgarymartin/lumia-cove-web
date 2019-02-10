@@ -49,8 +49,7 @@ class LegacyOverlay extends React.Component<any, any> {
     if(this.props.history.location.search) {
 			let room = this.props.history.location.search.match(/room=(\w+)/)[1];
 			if (room) {
-      	this.setState({ room });
-      	this.connect();
+      	this.setState({ room }, this.connect);
 			}
     }
 	}
@@ -66,6 +65,7 @@ class LegacyOverlay extends React.Component<any, any> {
 			});
 			
 			socket.on('connect', () => {
+				console.log('Connected to socket');
 				socket.emit('connected', { name: 'lumia' });
 				socket.emit('room', { room: this.state.room, secret: 'LumiaOverRooms' });
 				socket.emit('overlay-event', { type: 'retrieve-overlay-config', room: this.state.room, secret: 'LumiaOverEverything', packed: {} });
@@ -82,12 +82,15 @@ class LegacyOverlay extends React.Component<any, any> {
 
 			socket.on('change-background', (config) => {
 				console.log('Color Config', config)
-				if(this.state.config.type == 1){
-					this.state.config.barConfig.background = `linear-gradient(90deg, ${config.colors[0]}, ${config.colors[1]}, ${config.colors[2]}, ${config.colors[3]})`
-					this.state.config.barConfig.colors = config.colors
+				const stateConfig = this.state.config;
+				if(this.state.config.type == 1) {
+					stateConfig.barConfig.background = `linear-gradient(90deg, ${config.colors[0]}, ${config.colors[1]}, ${config.colors[2]}, ${config.colors[3]})`
+					stateConfig.barConfig.colors = config.colors;
 				} else if (this.state.config.type == 2){
-					this.state.config.poweredConfig.colors = config.colors
+					stateConfig.poweredConfig.colors = config.colors
 				}
+
+				this.setState({ config: stateConfig })
 			});
 		}
 	}
