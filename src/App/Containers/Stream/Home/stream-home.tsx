@@ -15,9 +15,12 @@ const StreamHome = ({ history }) => (
 		</div>
 
 		<div className="video-contain">
-			<div className="video-holder demo" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', border: 'solid 1px white' }}>
-				Promo Video Coming Soon
-				{/* <iframe width="80%" height="80%" src="https://www.youtube.com/embed/fU7bRJupSD0" frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe> */}
+			{/* <div className="video-holder demo" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', border: 'solid 1px white' }}> */}
+			<div className="video-holder demo" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+				{/* Promo Video Coming Soon */}
+				<video width="100%" height="100%" controls>
+					<source src="/assets/promos/Lumia-Overlay.mp4"  type="video/mp4" />
+				</video>
 			</div>
 		</div>
 
