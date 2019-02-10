@@ -7,6 +7,7 @@ import Buy from './Containers/Payment/buy';
 import Compare from './Containers/Download/compare';
 import Download from './Containers/Download/download';
 import StreamHome from './Containers/Stream/Home/stream-home';
+import LegacyDownload from './Containers/Legacy/legacy-download';
 
 const Routes = () => (
 	<Switch>
@@ -16,6 +17,8 @@ const Routes = () => (
 		<Route path='/compare' component={Compare} />
 		<Route path='/download' component={Download} />
 		<Route path='/auth' component={Auth} />
+		{/* Legacy */}
+		<Route path='/legacy/download' component={LegacyDownload} />
 		<Route exact={true} path='/**' component={ StreamHome } />
 	</Switch>
 );
