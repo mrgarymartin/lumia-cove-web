@@ -112,10 +112,10 @@ class Overlay extends React.Component<any, any> {
 				<div id='LumiaOverlayPage'>
 					{room
 						? <div id='LumiaOverlay'>
-									{config.type == 1 &&
+									{config.type == 1 && config.barConfig &&
 										<div className='overlay-contain' style={{ position: 'absolute', top: config.barConfig.top, bottom: config.barConfig.bottom, opacity: config.barConfig.opacity, width: config.barConfig.width, height: config.barConfig.height, background: config.barConfig.background, boxShadow: config.barConfig.shadow.on ? `${config.barConfig.colors ? config.barConfig.colors[0]: config.barConfig.background} ${config.barConfig.shadow.horizontal} ${config.barConfig.shadow.vertical} ${config.barConfig.shadow.blur}` : '' }} />
 									}
-									{config.type == 2 &&
+									{config.type == 2 && config.poweredConfig && config.poweredConfig.colors &&
 										<div className='overlay-contain' style={{ textAlign: 'right', position: 'absolute', bottom: config.poweredConfig.bottom, top: config.poweredConfig.top, right: config.poweredConfig.right, left: config.poweredConfig.left, fontSize: config.poweredConfig.fontSize, opacity: config.poweredConfig.opacity }} >
 											<div className='powered-contain'>
 												<span style={{ color: config.poweredConfig.colors[0], textShadow: config.poweredConfig.shadow.on ? `${config.poweredConfig.colors[0]} ${config.poweredConfig.shadow.horizontal} ${config.poweredConfig.shadow.vertical} ${config.poweredConfig.shadow.blur}` : '' }}>Powe</span>
