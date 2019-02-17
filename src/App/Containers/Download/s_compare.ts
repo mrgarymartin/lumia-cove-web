@@ -12,11 +12,31 @@ export const ComparePageTitle: any = styled.div`
 	margin-bottom: 30px;
 	font-size: 40px;
 	font-weight: 700;
+	/* Tablet */
+	@media (max-width: 950px) {
+		font-size: 6vw;
+	}
 `;
 
 export const CompareBox: any = styled.div`
 	border: solid white 1px;
-	width: 50vw;
+	// width: 50vw;
+
+
+	/* Tablet */
+	@media (max-width: 950px) {
+		max-width: 80vw;
+	}
+
+	/* Mobile */
+	@media (max-width: 650px) {
+
+	}
+
+	/* < Mobile */
+	@media (max-width: 319px) {
+
+	}
 `;
 
 export const CompareTitleContain: any = styled.div`
@@ -50,13 +70,26 @@ export const CompareBoxColumn: any = styled.div`
 	justify-content: center;
 	align-items: center;
 	width: 200px;
+	min-width: 200px;
 	padding: 10px 5px;
+
+	/* Tablet */
+	@media (max-width: 950px) {
+		width: 130px;
+		min-width: 130px;
+	}
 `;
 
 export const CompareBoxColumnDescription: any = styled(CompareBoxColumn)`
 	width: 500px;
 	justify-content: flex-start;
 	text-align: left;
+
+	/* Tablet */
+	@media (max-width: 950px) {
+		// width: 35%;
+		// min-width: 35%;
+	}
 `;
 
 export const GetButton: any = styled.button`

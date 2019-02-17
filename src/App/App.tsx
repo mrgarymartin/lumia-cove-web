@@ -1,5 +1,5 @@
 // React and Redux
-import React from 'react';
+import React, { Fragment } from 'react';
 import Routes from './Routes';
 import { withRouter } from 'react-router-dom';
 
@@ -14,6 +14,7 @@ import Footer from './Shared/Components/footer';
 import { Body } from './Shared/Styles/body';
 import { IconContext } from 'react-icons';
 import { ToastContainer, Bounce, ToastPosition } from 'react-toastify';
+import './Shared/Styles/s_lumia-bar.css';
 
 // 3rd Party
 import 'react-toastify/dist/ReactToastify.css';
@@ -29,11 +30,20 @@ const App = (props) => (
 				closeButton={false}
 			/>
 			<ScrollToTop>
-				{!props.history.location.pathname.includes('overlay') && <NavigationBar />}
-				<div style={{ marginBottom: '90px' }} />
-					<Routes />
-				{!props.history.location.pathname.includes('overlay') && <Footer />}
+				{!props.history.location.pathname.match(/(overlay|school)/) &&
+					<Fragment>
+						<NavigationBar />
+						<div style={{ marginBottom: '90px' }} />
+					</Fragment>
+				}
 				
+				<Routes />
+					
+				{!props.history.location.pathname.match(/(overlay|school)/) &&
+					<Fragment>
+						<Footer />
+					</Fragment>
+				}
 			</ScrollToTop>
 		</Body>
 );

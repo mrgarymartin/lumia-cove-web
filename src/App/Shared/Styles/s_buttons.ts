@@ -117,3 +117,9 @@ export const TopRightCloseButton: any = styled(Button)`
     top: 15px; 
     right: 15px;
 `;
+
+export const NiceButton: any = styled(Button)`
+	background: rgba(0,0,0,0);
+	color: white;
+	border-color: white;
+`;

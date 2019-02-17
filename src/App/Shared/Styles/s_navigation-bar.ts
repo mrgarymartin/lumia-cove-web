@@ -36,6 +36,12 @@ export const LogoImage: any = styled.img`
 export const NavAuthContain: any = styled.div`
 	color: white;
 	position: relative;
+	display: flex;
+	align-items: center;
+`;
+
+export const NavLinks: any = styled.div`
+	margin-right: 50px;
 `;
 
 export const NavAuth: any = styled.div`

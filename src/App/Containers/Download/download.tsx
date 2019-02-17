@@ -1,8 +1,6 @@
 import React, { Fragment } from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
-import axios from 'axios';
-import { signIn } from '../../Services/Actions/AuthActions';
 import { DownloadPage, DownloadTitle, RedownloadText, ThanksText } from './s_download';
 import LumiaRequest from '../../Shared/Helpers/LumiaRequest';
 import { SwitchRow, SwitchButton } from '../Auth/s_auth';

@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 import { connect } from 'react-redux';
 import { withRouter, Link } from 'react-router-dom';
 import axios from 'axios';
-import { Nav, LogoImage, LogoContain, NavAuthContain, NavAuth, NavAvatar, NavAvatarPlaceholder, NavAuthDropdownContain, NavUsername } from '../Styles/s_navigation-bar';
+import { Nav, LogoImage, LogoContain, NavAuthContain, NavAuth, NavAvatar, NavAvatarPlaceholder, NavAuthDropdownContain, NavUsername, NavLinks } from '../Styles/s_navigation-bar';
 import { FaUserAlt } from 'react-icons/fa';
 import { signOut } from '../../Services/Actions/AuthActions';
 import { toast } from 'react-toastify';
@@ -39,11 +39,10 @@ class NavigationBar extends React.Component<any> {
 					<LogoImage className="logo-image" src="assets/StreamLogo.png" onClick={() => this.props.history.push('/stream')} />
 				</LogoContain>
 
-				<div>
-
-				</div>
-
 				<NavAuthContain>
+					<NavLinks>
+						<Link to="/school">School</Link>
+					</NavLinks>
 					{username
 						? <NavAuth onClick={this.clickedNavAuth}>
 								{avatar

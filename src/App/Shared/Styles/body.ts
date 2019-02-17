@@ -2,6 +2,8 @@ import styled from 'styled-components';
 
 export const Body: any = styled.div`
     width: 100%;
+		max-width: 100vw;
+		overflow: auto;
     height: 100%;
     font-size: 16px;
     text-align: center;
@@ -18,9 +20,9 @@ export const Body: any = styled.div`
 
     a {
         text-decoration: none;
-        color: inherit;
+        // color: inherit;
         &:visited {
-            color: inherit;
+            // color: inherit;
         }
     }
 

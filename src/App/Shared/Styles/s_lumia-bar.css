@@ -1,0 +1,26 @@
+@keyframes lumia-animation {
+	0% {
+			background-position: 0 50%;
+	}
+
+	100% {
+			background-position: 133% 50%;
+	}
+}
+
+ul {
+	padding: 0 25px;
+}
+
+li {
+	line-height: 23px;
+}
+
+hr {
+	border: none;
+	height: 4px;
+	background: purple;
+	background: linear-gradient(to right, #F500F5, #0e9dd9,#00f,#0ff,#0f0,#ff0,orange, red,#6441a5,#00f,#0ff,#0f0, orange, #ff0,#F500F5);
+	background-size: 400% 400%;
+	animation: lumia-animation 10s linear infinite;
+}

@@ -9,7 +9,8 @@ import Download from './Containers/Download/download';
 import StreamHome from './Containers/Stream/Home/stream-home';
 import LegacyDownload from './Containers/Legacy/legacy-download';
 import LegacyOverlay from './Containers/Legacy/Overlay/legacy-overlay';
-import overlay from './Containers/Overlay/overlay';
+import Overlay from './Containers/Overlay/overlay';
+import SchoolHome from './Containers/School/school-home';
 
 const Routes = () => (
 	<Switch>
@@ -19,8 +20,8 @@ const Routes = () => (
 		<Route path='/compare' component={Compare} />
 		<Route path='/download' component={Download} />
 		<Route path='/auth' component={Auth} />
-
-		<Route path='/overlay' component={overlay} />
+		<Route path='/overlay' component={Overlay} />
+		<Route path='/school' component={SchoolHome} />
 		{/* Legacy */}
 		<Route path='/legacy/download' component={LegacyDownload} />
 		<Route path='/legacy/overlay' component={LegacyOverlay} />
