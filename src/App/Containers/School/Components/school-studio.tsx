@@ -32,7 +32,7 @@ class SchoolStudio extends React.Component<any> {
 						<LessonImage src='/assets/School/Studio/2School-Studio-Reaction-Create.gif' />
 						<br />
 						<br />
-						<div>Next up, we’ll go into the first option we can create in Studio… <NiceButton><Link to='/school/scenes'>Scenes</Link></NiceButton></div>
+						<div>Next up, we’ll go into the first option we can create in Studio… <Link to='/school/scenes'><NiceButton>Scenes</NiceButton></Link></div>
 					</LessonOverview>
 				</LessonBody>
 			</LessonPage>

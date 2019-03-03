@@ -92,7 +92,7 @@ class SchoolReactions extends React.Component<any> {
 						That wraps up Studio Reactions, now that you've created a reaction you'll be able to select them in your Alerts and Chat Commands
 						<br />
 						<br />
-						<div>Next on the list is Reactions sibling... <NiceButton><Link to='/school/hypes'>Hypes</Link></NiceButton></div>
+						<div>Next on the list is Reactions sibling... <Link to='/school/hypes'><NiceButton>Hypes</NiceButton></Link></div>
 					</LessonOverview>
 				</LessonBody>
 			</LessonPage>

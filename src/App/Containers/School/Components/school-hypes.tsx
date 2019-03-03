@@ -78,7 +78,7 @@ class SchoolHypes extends React.Component<any> {
 						That wraps up studio Hypes, now that you've created a Hype you'll be able to select them in your Alerts
 						<br />
 						<br />
-						<div>Next on the list is <NiceButton><Link to='/school/fuze'>Fuze</Link></NiceButton></div>
+						<div>Next on the list is <Link to='/school/fuze'><NiceButton>Fuze</NiceButton></Link></div>
 					</LessonOverview>
 				</LessonBody>
 			</LessonPage>

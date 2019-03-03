@@ -93,7 +93,7 @@ class SchoolScenes extends React.Component<any> {
 						<br />
 						<br />
 						<br />
-						<div>Next up, we’ll go into <NiceButton><Link to='/school/Reactions'>Reactions</Link></NiceButton></div>
+						<div>Next up, we’ll go into <Link to='/school/Reactions'><NiceButton>Reactions</NiceButton></Link></div>
 					</LessonOverview>
 				</LessonBody>
 			</LessonPage>

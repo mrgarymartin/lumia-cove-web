@@ -41,6 +41,12 @@ class NavigationBar extends React.Component<any> {
 
 				<NavAuthContain>
 					<NavLinks>
+						<Link to="/home">Home</Link>
+					</NavLinks>
+					<NavLinks>
+						<Link to="/videos">Videos</Link>
+					</NavLinks>
+					<NavLinks>
 						<Link to="/school">School</Link>
 					</NavLinks>
 					{username
@@ -53,7 +59,7 @@ class NavigationBar extends React.Component<any> {
 
 								{authDropdownOpen && <NavAuthDropdownContain onClick={this.signOut}>Sign Out</NavAuthDropdownContain>}
 							</NavAuth>
-						: <NavAuth onClick={this.signIn}>SIGN IN</NavAuth>
+						: <NavAuth onClick={this.signIn}>Sign In</NavAuth>
 					}
 				</NavAuthContain>
 			</Nav>

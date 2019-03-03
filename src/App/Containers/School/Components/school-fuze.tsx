@@ -83,7 +83,7 @@ class SchoolFuze extends React.Component<any> {
 						<br />
 						<br />
 						<br />
-						<div>Next on the list is <NiceButton><Link to='/school/chat'>Chat</Link></NiceButton></div>
+						<div>Next on the list is <Link to='/school/chat'><NiceButton>Chat</NiceButton></Link></div>
 					</LessonOverview>
 				</LessonBody>
 			</LessonPage>
