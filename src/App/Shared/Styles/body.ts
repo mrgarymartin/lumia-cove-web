@@ -20,10 +20,7 @@ export const Body: any = styled.div`
 
     a {
         text-decoration: none;
-        // color: inherit;
-        &:visited {
-            // color: inherit;
-        }
+        &:visited {}
     }
 
     ul {

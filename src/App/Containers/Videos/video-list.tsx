@@ -43,7 +43,7 @@ class VideoList extends Component<any> {
 			<VideoListPage>
 				<VideoListTitle>Videos</VideoListTitle>
         <VideoListSubTitle>
-					Submit your videos on our <a className="site-link" target="_blank" href="https://discord.gg/D5xywEN">Discord</a>
+					Submit your videos on our <a className="link" target="_blank" href="https://discord.gg/D5xywEN">Discord</a>
 				</VideoListSubTitle>
         <VideoListHeadBorder />
 
@@ -57,7 +57,7 @@ class VideoList extends Component<any> {
 
 						return <VideoBox key={video.title}>
 							<VideoTitle>
-								{video.title} by <a className="site-link" target="_blank" href={siteLink}>{video.username}</a>
+								{video.title} by <a className="link" target="_blank" href={siteLink}>{video.username}</a>
 							</VideoTitle>
 							{video.videoType === 'iframe'
 								? <iframe width="80%" height="80%" src={video.path} frameBorder="0" allowFullScreen></iframe>
