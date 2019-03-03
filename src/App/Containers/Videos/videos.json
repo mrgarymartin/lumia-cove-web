@@ -1,6 +1,27 @@
 [
 	{
 		"site": "twitch",
+		"username": "i3oone",
+		"title": "........ Glorious!",
+		"videoType": "local",
+		"path": "twitch-boone.mp4"
+	},
+	{
+		"site": "twitch",
+		"username": "night_daze_",
+		"title": "Let's chat",
+		"videoType": "local",
+		"path": "twitch-nightdaze.mp4"
+	},
+	{
+		"site": "twitch",
+		"username": "Chiefy",
+		"title": "Whoop whoop",
+		"videoType": "local",
+		"path": "twitch-chiefy.mp4"
+	},
+	{
+		"site": "twitch",
 		"username": "firelaced",
 		"title": "There's a light on my cap",
 		"videoType": "iframe",
