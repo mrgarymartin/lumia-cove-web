@@ -1,6 +1,13 @@
 [
 	{
 		"site": "twitch",
+		"username": "onkelpipi",
+		"title": "I'll follow you",
+		"videoType": "iframe",
+		"path": "https://clips.twitch.tv/embed?clip=AmusedKindCodKeepo&autoplay=false&tt_medium=clips_embed"
+	},
+	{
+		"site": "twitch",
 		"username": "i3oone",
 		"title": "........ Glorious!",
 		"videoType": "local",
