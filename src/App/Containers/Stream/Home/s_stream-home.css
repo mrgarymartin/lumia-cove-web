@@ -109,6 +109,11 @@
 
 	.video-holder {
 	}
+
+	/* .platform-contain {
+		margin-bottom: 60px;
+		font-size: 1.4rem;
+	} */
 }
 
 /* < Mobile */
@@ -129,6 +134,33 @@
 	width: 80%;
 	margin: auto;
 	margin-bottom: 80px;
+}
+
+#integations-page {
+
+}
+
+.row-contain {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.brand-contain {
+	width: 200px;
+}
+
+.home-brand-logo {
+	height: 50px;
+	margin-right: 20px;
+}
+
+.home-brand-logo-small {
+	height: 60px;
+}
+
+.home-brand-logo-big {
+	height: 30px;
 }
 
 /* Features */
@@ -195,4 +227,32 @@ ul {
 		margin-top: 40px;
 		width: 80%;
 		padding: 20px 0;
+}
+
+/* Desktop */
+@media (min-width: 476px) {
+
+}
+
+/* Tablet */
+@media (max-width: 840px) {
+}
+
+/* Mobile */
+@media (max-width: 650px) {
+	.home-brand-logo {
+		height: 30px;
+	}
+
+	.home-brand-logo-small {
+		height: 40px;
+	}
+
+	.home-brand-logo-big {
+		height: 15px;
+	}
+}
+
+/* < Mobile */
+@media (max-width: 319px) {
 }

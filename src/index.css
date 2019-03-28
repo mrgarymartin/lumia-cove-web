@@ -84,9 +84,12 @@ a {
     color: red;
 }
 
+html {
+  font-size: 18px;
+}
+
 body {
   background-color: var(--twitchDark);
-  font-size: 18px;
   line-height: 25px;
   width: 100%;
   overflow-x: hidden;
@@ -338,22 +341,22 @@ button:active {
 }
 
 @media (max-width: 840px) {
-  body {
-        font-size: 14px;
-    }
+  html {
+		font-size: 14px;
+	}
 
-    .main-button {
-      font-size: 1.1rem;
-      letter-spacing: 2px;
-    }
+	.main-button {
+		font-size: 1.1rem;
+		letter-spacing: 2px;
+	}
     
-    .head-title {
-      font-size: 1.6rem;
-    }
+	.head-title {
+		font-size: 1.6rem;
+	}
 
-    .sub-description {
-      font-size: 1.2rem;
-    }
+	.sub-description {
+		font-size: 1.2rem;
+	}
 }
 
 /* Mobile */
@@ -362,7 +365,7 @@ button:active {
     --lampSize: 100px;
   }
 
-  body {
+  html {
         font-size: 12px;
     }
 }

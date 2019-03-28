@@ -42,6 +42,7 @@ export const NavAuthContain: any = styled.div`
 
 export const NavLinks: any = styled.div`
 	margin-right: 50px;
+	font-size: .8rem;
 `;
 
 export const NavAuth: any = styled.div`

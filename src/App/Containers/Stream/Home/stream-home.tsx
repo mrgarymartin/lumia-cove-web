@@ -50,6 +50,37 @@ const StreamHome = ({ history }) => (
         </div>
     </div>
 
+		{/* Integrations */}
+		<div id="integrations-page" className="info-bar">
+        <div className="head-title">Integrations</div>
+        <div className="head-border" />
+        <div className="sub-description-contain">
+					<div className="row-contain">
+            <div className="brand-contain"><img className="home-brand-logo home-brand-logo-small" src="assets/brands/hue-high.png" title="Phillips hue" alt="Phillips Hue" /></div>
+            <div className="brand-contain"><img className="home-brand-logo home-brand-logo-small" src="assets/brands/nanoleaf-big.png" title="Nanoleaf" alt="Nanoleaf" /></div>
+            <div className="brand-contain"><img className="home-brand-logo home-brand-logo-big" src="assets/brands/lifx.png" title="Lifx" alt="Lifx" /></div>
+					</div>
+					<div className="row-contain">
+            <div className="brand-contain"><img className="home-brand-logo" src="assets/brands/twitch.png" title="Twitch" alt="Twitch" /></div>
+            <div className="brand-contain"><img className="home-brand-logo home-brand-logo-big" src="assets/brands/mixer.png" title="Mixer" alt="Mixer" /></div>
+            <div className="brand-contain"><img className="home-brand-logo home-brand-logo-big" src="assets/brands/youtube.png" title="Youtube" alt="Youtube" /></div>
+					</div>
+					<div className="row-contain">
+            <div className="brand-contain"><img className="home-brand-logo home-brand-logo-big" src="assets/brands/streamlabs.png" title="Streamlabs" alt="Streamlabs" /></div>
+            <div className="brand-contain"><img className="home-brand-logo home-brand-logo-big" src="assets/brands/streamelements.png" title="Stream Elements" alt="Stream Elements" /></div>
+            <div className="brand-contain"><img className="home-brand-logo" src="assets/brands/extralife.png" title="ExtraLife" alt="ExtraLife" /></div>
+					</div>
+					{/* <div className="row-contain">
+            <div className="brand-contain"><img className="home-brand-logo home-brand-logo-big" src="assets/brands/streamdeck.png" title="Elgato Stream Deck" alt="Elgato Stream Deck" /></div>
+					</div> */}
+					<div className="row-contain">
+            <div className="brand-contain"><img className="home-brand-logo home-brand-logo-big" src="assets/brands/tipeeestream.png" title="Tipeeestream" alt="Tipeeestream" /></div>
+            <div className="brand-contain"><img className="home-brand-logo home-brand-logo-big" src="assets/brands/treatstream.png" title="Treatstream" alt="Treatstream" /></div>
+            <div className="brand-contain"><img className="home-brand-logo" src="assets/brands/tiltify.png" title="Tiltify" alt="Tiltify" /></div>
+					</div>
+        </div>
+    </div>
+
 		{/* Features */}
 		<div id="features-page" className="info-bar">
         <div className="head-title">Features</div>
