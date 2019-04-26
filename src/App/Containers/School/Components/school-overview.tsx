@@ -5,6 +5,7 @@ import { LessonPage, LessonHead, LessonHeadContain, LessonTitle, LessonBody, Les
 import { Button } from '../../../Shared/Styles/s_buttons';
 import { LogoImage } from '../../../Shared/Styles/s_navigation-bar';
 
+const nextUp = require('../school-order.json').studioGeneral;
 class SchoolOverview extends React.Component<any> {
 	state = {
 	};
@@ -17,7 +18,7 @@ class SchoolOverview extends React.Component<any> {
 				<LessonHeadContain>
 					<LessonHead>
 						<LessonTitle><LogoImage style={{ marginRight: '20px' }} className="logo-image" src="/assets/StreamLogo.png" />Lumia Stream School Overview</LessonTitle>
-						<Button onClick={() => this.props.history.push('/school/studio')}>Next Lesson ></Button>
+						<Button onClick={() => this.props.history.push(nextUp.path)}>Next Lesson ></Button>
 					</LessonHead>
 					<LessonHeaderRow />
 				</LessonHeadContain>

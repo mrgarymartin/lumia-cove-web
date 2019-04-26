@@ -60,6 +60,12 @@ const StreamHome = ({ history }) => (
             <div className="brand-contain"><img className="home-brand-logo home-brand-logo-small" src="assets/brands/nanoleaf-big.png" title="Nanoleaf" alt="Nanoleaf" /></div>
             <div className="brand-contain"><img className="home-brand-logo home-brand-logo-big" src="assets/brands/lifx.png" title="Lifx" alt="Lifx" /></div>
 					</div>
+
+					<div className="row-contain">
+            <div className="brand-contain"><img className="home-brand-logo home-brand-logo-big" src="assets/brands/streamdeck.png" title="Elgato Stream Deck" alt="Elgato Stream Deck" /></div>
+            <div className="brand-contain"><img className="home-brand-logo" src="assets/brands/tplink-full.png" title="Tplink Kasa" alt="Tplink Kasa" /></div>
+            <div className="brand-contain"><img className="home-brand-logo" src="assets/brands/yeelight-full.png" title="Yeelight" alt="Yeelight" /></div>
+					</div>
 					<div className="row-contain">
             <div className="brand-contain"><img className="home-brand-logo" src="assets/brands/twitch.png" title="Twitch" alt="Twitch" /></div>
             <div className="brand-contain"><img className="home-brand-logo home-brand-logo-big" src="assets/brands/mixer.png" title="Mixer" alt="Mixer" /></div>
@@ -70,9 +76,6 @@ const StreamHome = ({ history }) => (
             <div className="brand-contain"><img className="home-brand-logo home-brand-logo-big" src="assets/brands/streamelements.png" title="Stream Elements" alt="Stream Elements" /></div>
             <div className="brand-contain"><img className="home-brand-logo" src="assets/brands/extralife.png" title="ExtraLife" alt="ExtraLife" /></div>
 					</div>
-					{/* <div className="row-contain">
-            <div className="brand-contain"><img className="home-brand-logo home-brand-logo-big" src="assets/brands/streamdeck.png" title="Elgato Stream Deck" alt="Elgato Stream Deck" /></div>
-					</div> */}
 					<div className="row-contain">
             <div className="brand-contain"><img className="home-brand-logo home-brand-logo-big" src="assets/brands/tipeeestream.png" title="Tipeeestream" alt="Tipeeestream" /></div>
             <div className="brand-contain"><img className="home-brand-logo home-brand-logo-big" src="assets/brands/treatstream.png" title="Treatstream" alt="Treatstream" /></div>
@@ -128,7 +131,7 @@ const StreamHome = ({ history }) => (
                     <li className="feature">Reactions for new hosts</li>
                 </div>
                  <div className="feature-set">
-                    <li className="feature">Reactions for new SuperChats</li>
+                    <li className="feature">Reactions for new super chats</li>
                     <li className="feature">Reactions for new raids</li>
                 </div>
                  <div className="feature-set">

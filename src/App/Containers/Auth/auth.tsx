@@ -67,6 +67,8 @@ class Auth extends React.Component<any, any> {
 			return;
 		}
 
+		this.setState({ loading: true });
+		
 		LumiaRequest.post('register', { applicationId: 1, email: this.state.email, username: this.state.username, password: this.state.password, confirm_password: this.state.confirm })
 				.then((res: any) => {
 					console.log('Register res: ', res);
@@ -80,6 +82,14 @@ class Auth extends React.Component<any, any> {
 						if (error.response) {
 							if (error.response.status === 404) {
 								this.setState({ error: 'Could not connect to the Lumia Server: 404, please contact us if this continues' });
+							} else if (error.response.status === 400) {
+								try {
+									console.log('error.response: ', error.response);
+									const firstMessage = error.response.data.data[Object.keys(error.response.data.data)[0]][0];
+									this.setState({ error: `Ran into an issue registering: ${firstMessage}` });
+								} catch (err) {
+									this.setState({ error: `Ran into an issue registering: Check all fields and then continue` });
+								}
 							} else {
 								this.setState({ password: '', confirm: '', error: 'Ran into an error registering. Check all fields and resubmit' });
 							}

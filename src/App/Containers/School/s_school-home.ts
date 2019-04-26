@@ -43,6 +43,57 @@ export const SidebarLink: any = styled(NavLink)`
   }
 `;
 
+
+export const SettingAlone: any = styled.div`
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: ${(props: any) => props.isPath ? Colors.white : '#8c8b8d'};
+
+  &:hover {
+    color: ${Colors.white};
+  }
+`;
+
+export const SettingIcon: any = styled.div`
+  margin-right: 10px;
+`;
+
+export const SettingParent: any = styled.div`
+  width: 100%;
+`;
+
+export const ParentAlone: any = styled.div`
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  color: ${(props: any) => props.isPath ? Colors.white : '#8c8b8d'};
+  
+  &:hover{
+    color: ${Colors.white};
+  }
+`;
+export const LeftParent: any = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+export const ChildrenSettings: any = styled.div`
+  margin-left: 26px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+`;
+
+export const ChildAlone: any = styled.div`
+
+`;
+
 export const LessonPage: any = styled.div`
 	text-align: left;
 	padding: 10px 20px;
@@ -63,10 +114,15 @@ export const LessonHeaderRow: any = styled.hr`
 	margin: 20px 0;
 `;
 
+
 export const LessonTitle: any = styled.h2`
 	display: flex;
 	align-items: center;
 `;
+
+export const LessonSubtitle: any = styled.h2`
+	margin: 30px 0 20px;
+`
 
 export const LessonBody: any = styled.div`
 
@@ -77,5 +133,11 @@ export const LessonOverview: any = styled.div`
 `;
 
 export const LessonImage: any = styled.img`
+	display: block;
 	width: 100%;
+	margin: 20px 0 20px;
+`;
+
+export const SmallLessonImage: any = styled(LessonImage)`
+	width: 200px;
 `;

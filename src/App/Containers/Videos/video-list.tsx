@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import { connect } from 'react-redux';
 import { Link, withRouter } from 'react-router-dom';
-import { VideoListPage, VideoListContain, VideoBox, VideoListTitle, VideoListHeadBorder, VideoListSubTitle, VideoTitle } from './s_video-list';
+import { VideoListPage, VideoListContain, VideoBox, VideoTitle } from './s_video-list';
 import './s_video-list.css';
 
 let videoJson = require('./videos.json');
@@ -41,11 +41,11 @@ class VideoList extends Component<any> {
 
 		return (
 			<VideoListPage>
-				<VideoListTitle>Videos</VideoListTitle>
-        <VideoListSubTitle>
+				<div className="page-title">Videos</div>
+				<div className="page-subtitle">
 					Submit your videos on our <a className="link" target="_blank" href="https://discord.gg/D5xywEN">Discord</a>
-				</VideoListSubTitle>
-        <VideoListHeadBorder />
+				</div>
+				<hr className="page-title-border" />
 
         <VideoListContain>
 					{videoList.map((video) => {

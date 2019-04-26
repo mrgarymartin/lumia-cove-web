@@ -10,6 +10,7 @@ class Download extends React.Component<any, any> {
   state = {
     link: null,
 		platform: null,
+		fromPremium: null,
 		error: null,
   };
 
@@ -23,6 +24,8 @@ class Download extends React.Component<any, any> {
 			if (!this.props.auth.premium) {
 				this.props.history.push('/buy');
 			}
+		} else if (this.props.history.location.state && this.props.history.location.state.fromPremium) {
+			this.setState({ fromPremium: true });
 		}
   }
 
@@ -44,12 +47,25 @@ class Download extends React.Component<any, any> {
   }
 
   render() {
-		const { platform, link } = this.state;
+		const { platform, link, fromPremium } = this.state;
 
       return (
         <DownloadPage>
 					<Fragment>
-						<DownloadTitle>Grab your download here</DownloadTitle>
+						{fromPremium &&
+							<div style={{ marginBottom: '40px' }}>
+								<ThanksText style={{}}>Thank you for purchasing Lumia Stream!</ThanksText>
+								
+								<DownloadTitle style={{ color: 'aqua', fontSize: '20px' }}>If you already have Lumia Stream and just want Lumia Stream to show premium, close Lumia Stream and open the app back up</DownloadTitle>
+								
+								{/* // <RedownloadText className="redownload" onClick={this.download}>
+								// 		if your download doesn't start immediately click here
+								// </RedownloadText> */}
+							</div>
+						}
+
+						<DownloadTitle>{fromPremium && 'Or'} Grab your download here</DownloadTitle>
+
 						<div>Choose a platform</div>
 						<SwitchRow style={{ marginTop: '25px' }}>
 							<SwitchButton style={{ width: '100px' }} on={platform==='win'} name="win" onClick={() => this.chosePlatform('win')}>Windows</SwitchButton>

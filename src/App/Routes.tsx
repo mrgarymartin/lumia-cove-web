@@ -3,6 +3,7 @@ import { Route, Switch } from 'react-router-dom';
 
 // Components
 import Auth from './Containers/Auth/auth';
+import Account from './Containers/Account/account';
 import Buy from './Containers/Payment/buy';
 import Compare from './Containers/Download/compare';
 import Download from './Containers/Download/download';
@@ -15,6 +16,7 @@ import videoList from './Containers/Videos/video-list';
 
 const Routes = () => (
 	<Switch>
+		<Route path='/account' component={ Account } />
 		<Route path='/buy' component={ Buy } />
 		<Route path='/stream' component={ StreamHome } />
 		<Route path='/home' component={ StreamHome } />

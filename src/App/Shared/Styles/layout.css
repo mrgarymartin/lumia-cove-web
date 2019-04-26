@@ -1,0 +1,66 @@
+
+.center-flex,
+.center-flex-col,
+.center-flex-row {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.center-flex-row {
+	flex-direction: row;
+}
+
+.center-flex-col {
+	flex-direction: column;
+}
+
+.top,
+.top-left,
+.top-right {
+	position: absolute;
+	top: 0;
+}
+
+.top-10,
+.top-10-left,
+.top-10-right {
+	position: absolute;
+	top: 10px;
+}
+
+.bottom,
+.bottom-left,
+.bottom-right {
+	position: absolute;
+	bottom: 0;
+}
+
+.bottom-10,
+.bottom-10-left,
+.bottom-10-right {
+	position: absolute;
+	bottom: 10px;
+}
+
+.top-right,
+.bottom-right {
+	right: 0;
+}
+
+.top-10-right,
+.bottom-10-right {
+	right: 10px;
+}
+
+.top-left {
+	left: 0;
+}
+
+.top-10-left {
+	left: 10px;
+}
+
+.push-down-10 {
+	margin-bottom: 10px;
+}

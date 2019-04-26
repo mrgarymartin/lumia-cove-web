@@ -1,0 +1,17 @@
+{
+	"overview": {"name": "Overview", "path": "/school/overview"},
+	"studioGeneral": {"name": "Studio General", "path": "/school/studio/general"},
+	"studioScenes": {"name": "Scenes", "path": "/school/studio/scenes"},
+	"studioReactions": {"name": "Reactions", "path": "/school/studio/reactions"},
+	"studioHypes": {"name": "Hypes", "path": "/school/studio/hypes"},
+	"studioAnimations": {"name": "Animations", "path": "/school/studio/animations"},
+	"studioFuze": {"name": "Fuze", "path": "/school/studio/fuze"},
+	"chatGeneral": {"name": "Chat General", "path": "/school/chat/general"},
+	"chatTiers": {"name": "Chat Tiers", "path": "/school/chat/tiers"},
+	"chatPoints": {"name": "Chat Points", "path": "/school/chat/points"},
+	"chatColors": {"name": "Chat Colors", "path": "/school/chat/colors"},
+	"chatScenes": {"name": "Chat Scenes", "path": "/school/chat/scenes"},
+	"chatReactions": {"name": "Chat Reactions", "path": "/school/chat/reactions"},
+	"chatInteractives": {"name": "Chat Interactives", "path": "/school/chat/interactives"},
+	"alertsGeneral": {"name": "Alerts", "path": "/school/alerts"}
+}

@@ -14,10 +14,10 @@ import { toast } from 'react-toastify';
 import { URLS } from '../../Shared/Helpers/LumiaRequest';
 import LoaderMask from '../../Shared/Components/loaderMask';
 
-const plans = [
-	{ id: 'streamMonthlyPlan', price: '3.99/month', coupon: 'streamLegacyMonthlyCoupon' },
-	{ id: 'streamSemiAnnualPlan', price: '20.00/6 months', coupon: 'streamLegacySemiAnnualCoupon' },
-	{ id: 'streamYearlyPlan', price: '38.00/yearly', coupon: 'streamLegacyYearlyCoupon' },
+export const LumiaPlans = [
+	{ name: 'monthly', link: 'lumia-stream-monthly-v1', id: 'streamMonthlyPlan', price: '3.99/month', coupon: 'streamLegacyMonthlyCoupon' },
+	{ name: 'semi-annual', link: 'lumia-stream-semiannual-v1', id: 'streamSemiAnnualPlan', price: '20.00/6 months', coupon: 'streamLegacySemiAnnualCoupon' },
+	{ name: 'yearly', link: 'lumia-stream-yearly-v1', id: 'streamYearlyPlan', price: '38.00/yearly', coupon: 'streamLegacyYearlyCoupon' },
 ];
 
 class Buy extends React.Component<any> {
@@ -25,7 +25,7 @@ class Buy extends React.Component<any> {
 	errorTimeout: Timeout;
 
   state = {
-		plan: plans[0],
+		plan: LumiaPlans[0],
     clientToken: null,
 		paypal: null,
 		paid: null,
@@ -40,7 +40,7 @@ class Buy extends React.Component<any> {
 		}
 
 		if (this.props.auth.username && this.props.auth.premium) {
-			toast.error(`You already have a Premium Lumia Stream subscription`);
+			toast.error(`You already have a Premium Lumia Stream subscription. If you want to reactivate your subscription head to the My Account page`);
 		}
 
 
@@ -79,7 +79,7 @@ class Buy extends React.Component<any> {
 				console.log('payment: ', payment);
 				this.props.premium(true);
 				// this.props.history.goBack();
-				this.props.history.push('/download');
+				this.props.history.push('/download', { fromPremium: true });
 				toast.success(`Checked out successfully at ${plan.price}`);
 			} catch (err) {
 				console.log('err: ', err);
@@ -123,7 +123,7 @@ class Buy extends React.Component<any> {
 								<div style={{ marginBottom: '30px' }}>
 									<h2>Plan</h2>
 									<SwitchRow split={true} style={{ marginTop: '20px' }}>
-										{plans.map((iterPlan) =>
+										{LumiaPlans.map((iterPlan) =>
 											<SwitchButton on={plan.id === iterPlan.id} name={iterPlan.id} onClick={() => this.switchPlan(iterPlan)}>{iterPlan.price}</SwitchButton>
 										)}
 									</SwitchRow>

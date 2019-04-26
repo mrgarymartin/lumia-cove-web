@@ -9,17 +9,6 @@ export const VideoListPage = styled.div `
 	color: white;
 `;
 
-export const VideoListTitle = styled.div `
-	font-family: 'Archivo Black', sans-serif;  
-	margin-bottom: 10px;
-	font-size: 1.4rem;
-`;
-
-export const VideoListSubTitle = styled.div `
-	font-size: 1.2rem;
-	margin-bottom: 10px;
-`;
-
 export const VideoListHeadBorder = styled.hr `
 	width: 80%;
 	background: white;

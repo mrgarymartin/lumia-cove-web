@@ -1,0 +1,16 @@
+.page-title {
+	font-family: 'Archivo Black', sans-serif;  
+	margin-bottom: 10px;
+	font-size: 1.4rem;
+}
+
+.page-subtitle {
+	font-size: 1.2rem;
+	margin-bottom: 10px;
+}
+
+.page-title-border {
+	width: 80%;
+	background: white;
+	margin-bottom: 20px;
+}

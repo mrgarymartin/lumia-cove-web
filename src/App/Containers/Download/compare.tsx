@@ -25,7 +25,7 @@ const items = [
 	{ id: 24, title: <CompareTitleContain><IconLeft><FaRobot /></IconLeft><div>Thingamabot</div></CompareTitleContain>, description: 'Thingamabot: Need a helping hand? Thingamabot is here to save the day. Have Thingamabot communicate to the audience what\'s going on with Lumia, what lights can each tier choose, etc' , free: false, premium: true },
 	{ id: 25, title: <CompareTitleContain><IconLeft><FaChalkboard /></IconLeft><div>Dynamic RGB Overlays</div></CompareTitleContain>, description: 'Overlays: Surround your stream in an overlay that changes the color as your lights change' , free: false, premium: true },
 	// { id: 26, title: <CompareTitleContain><IconLeft><FaPlus /></IconLeft><div>Points (Coming Soon)</div></CompareTitleContain>, description: 'Points (Coming Soon)' , free: false, premium: true },
-	{ id: 27, title: <CompareTitleContain><IconLeft><FaSpinner /></IconLeft><div>Animations (Coming Soon)</div></CompareTitleContain>, description: 'Animations (Coming Soon)' , free: false, premium: true },
+	{ id: 27, title: <CompareTitleContain><IconLeft><FaSpinner /></IconLeft><div>Animations</div></CompareTitleContain>, description: 'Animations (Coming Soon)' , free: false, premium: true },
 ];
 
 class Compare extends React.Component<any> {

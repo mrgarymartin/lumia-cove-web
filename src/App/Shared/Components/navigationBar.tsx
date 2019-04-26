@@ -21,6 +21,12 @@ class NavigationBar extends React.Component<any> {
 		this.props.history.push('auth');
 	}
 
+	myAccount = () => {
+		console.log('My Account');
+		this.setState({ authDropdownOpen: false });
+		this.props.history.push('/account');
+	}
+
 	signOut = () => {
 		console.log('Signing out');
 		this.props.signOut();
@@ -57,7 +63,12 @@ class NavigationBar extends React.Component<any> {
 								}
 								<NavUsername>{ username }</NavUsername>
 
-								{authDropdownOpen && <NavAuthDropdownContain onClick={this.signOut}>Sign Out</NavAuthDropdownContain>}
+								{authDropdownOpen &&
+									<NavAuthDropdownContain>
+										<div onClick={this.myAccount}>My Account</div>
+										<div onClick={this.signOut}>Sign Out</div>
+									</NavAuthDropdownContain>
+								}
 							</NavAuth>
 						: <NavAuth onClick={this.signIn}>Sign In</NavAuth>
 					}

@@ -15,6 +15,8 @@ import { Body } from './Shared/Styles/body';
 import { IconContext } from 'react-icons';
 import { ToastContainer, Bounce, ToastPosition } from 'react-toastify';
 import './Shared/Styles/s_lumia-bar.css';
+import './Shared/Styles/layout.css';
+import './Shared/Styles/style-helpers.css';
 
 // 3rd Party
 import 'react-toastify/dist/ReactToastify.css';

@@ -1,6 +1,20 @@
 [
 	{
 		"site": "twitch",
+		"username": "chickdrummer88",
+		"title": "Prime storm",
+		"videoType": "iframe",
+		"path": "https://clips.twitch.tv/embed?clip=HorribleSucculentSangMrDestructoid&autoplay=false&tt_medium=clips_embed"
+	},
+	{
+		"site": "twitch",
+		"username": "derwood",
+		"title": "Bones and lights",
+		"videoType": "local",
+		"path": "twitch-derwood.mp4"
+	},
+	{
+		"site": "twitch",
 		"username": "onkelpipi",
 		"title": "I'll follow you",
 		"videoType": "iframe",
@@ -19,6 +33,13 @@
 		"title": "Let's chat",
 		"videoType": "local",
 		"path": "twitch-nightdaze.mp4"
+	},
+	{
+		"site": "twitch",
+		"username": "trixus",
+		"title": "Lumia Stream setup",
+		"videoType": "iframe",
+		"path": "https://www.youtube.com/embed/F28vJPZvvg0"
 	},
 	{
 		"site": "twitch",
