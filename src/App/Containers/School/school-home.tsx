@@ -155,6 +155,7 @@ class SchoolHome extends React.Component<any> {
 					<Switch>
 						<Route path='/school/overview' component={schoolOverview} />
 
+						{/* Studio */}
 						<Route path='/school/studio/general' component={schoolStudioGeneral} />
 						<Route path='/school/studio/scenes' component={schoolScenes} />
 						<Route path='/school/studio/reactions' component={schoolStudioReactions} />
@@ -162,6 +163,7 @@ class SchoolHome extends React.Component<any> {
 						<Route path='/school/studio/animations' component={schoolStudioAnimations} />
 						<Route path='/school/studio/fuze' component={schoolStudioFuze} />
 
+						{/* Chat */}
 						<Route path='/school/chat/general' component={schoolChatGeneral} />
 						<Route path='/school/chat/tiers' component={schoolChatTiers} />
 						<Route path='/school/chat/points' component={schoolChatPoints} />
@@ -170,7 +172,31 @@ class SchoolHome extends React.Component<any> {
 						<Route path='/school/chat/reactions' component={schoolChatReactions} />
 						<Route path='/school/chat/interactives' component={schoolChatInteractives} />
 
+						{/* Alerts */}
 						<Route path='/school/alerts' component={schoolAlerts} />
+
+						{/* Lights */}
+
+
+						{/* Accessories */}
+
+
+						{/* Streamdeck */}
+
+
+						{/* Hot Keys */}
+
+
+						{/* Thingamabot */}
+
+
+						{/* Overlays */}
+
+
+						{/* Shortcut Menu */}
+
+
+						{/* FAQ */}
 						
 						<Route path='/school/default-lights' component={schoolDefaultLights} />
 						<Route path='/school/thingamabot' component={schoolThingamabot} />

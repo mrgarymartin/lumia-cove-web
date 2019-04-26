@@ -13,65 +13,56 @@ class SchoolAlertsGeneral extends React.Component<any> {
 			<LessonPage>
 				<LessonHeadContain>
 					<LessonHead>
-						<LessonTitle><LogoImage style={{ marginRight: '20px' }} className="logo-image" src="/assets/StreamLogo.png" />Reactions</LessonTitle>
+						<LessonTitle><LogoImage style={{ marginRight: '20px' }} className="logo-image" src="/assets/StreamLogo.png" />Alerts</LessonTitle>
 						<Button onClick={() => this.props.history.push(nextUp.path)}>Next Lesson ></Button>
 					</LessonHead>
 					<LessonHeaderRow />
 				</LessonHeadContain>
 				<LessonBody>
 					<LessonOverview>
-						<h3>In this session we’ll be talking about Reactions.</h3>
+						<h3>Now we're going to be talking about Alerts.</h3>
 						<br />
-						<h3>Reactions is very simple to use after creating a Reaction in <Link to={'/school/studio/reactions'}>Studio.</Link></h3>
-						<LessonImage src="/assets/School/Chat/Reactions/1Reactions.png" />
-						<br />
-						<br />
-						Navigate to Chat -> Reactions
-						<br />
-						You'll now see the list of Reactions that chat can currently use
-						<LessonSubtitle>Let’s tie a Studio Reaction to Chat</LessonSubtitle>
-						Let's click Add Reaction in the top right corner
-						<br />
-						You'll now see an overlay that pops up with a Reaction Picker
-						<LessonImage src="/assets/School/Chat/Reactions/2Reactions.png" />
-						Give your Reaction a unique name, and feel free to test in the top right of the overlay
-						<br />
-						The name that you give to your Reaction will be the same name Chat will use to trigger the Reaction prepended with your Chat Command key (`!` by default)
+						<h3>Alerts is most likely what you came for. It is the heart and soul of Lumia Stream</h3>
+						<LessonImage src="/assets/School/Alerts/General/1Alerts.png" />
 						<br />
 						<br />
-						Now let's save the Reaction and head back to the Reaction list page
+						Navigate to Alerts -> (Site) -> (Type)
+						<br />
+						You'll be brought to a handful of settings you can choose from
+						<br />
+						<LessonSubtitle>Listen</LessonSubtitle>
+						This will determine if this specific Alert should be listened to or not.
+						<br />
+						<LessonSubtitle>Preference</LessonSubtitle>
+						Preference will give you the option to choose from either the native site or a platform.
+						<br />
+						A good use case for using the platform over the native site is when you want your Lumia Stream alert to match up with your overlay alerts.
+						<br />
+						<LessonSubtitle>Type</LessonSubtitle>
+						Type will give you the type of Reaction you want this alert to trigger.
+						<br />
+						<LessonSubtitle>Reaction/Hype</LessonSubtitle>
+						After selecting your type you will have the choice to choose between a previously <Link to="/school/studio/general">Studio</Link> created Reaction or Hype.
+						<br />
+						<LessonSubtitle>Reaction Configuration (When Type = Reaction)</LessonSubtitle>
+						When you choose a Reaction for the type you'll have the ability to edit the Reactions configuration if you created an editable Reactio in <Link to="/school/studio/reactions">Studio.</Link>
+						<br />
+						<LessonSubtitle>Duration (When Type = Reaction)</LessonSubtitle>
+						When you choose a Reaction for the type you'll have the ability to change the duration for how long the alert will last for.
+						<br />
+						<LessonSubtitle>Transition (When Type = Reaction)</LessonSubtitle>
+						When you choose a Reaction for the type you'll have the ability to change the transition time between starting the reaction and ending the reaction.
 						<br />
 						<br />
-						If we zoom into our newly created Reaction we'll see the name at the top of our Reaction.
-						<SmallLessonImage src="/assets/School/Chat/Reactions/3Reactions.png" style={{ width: '100px' }} />
+						<LessonSubtitle>Filters (When Type = Hype)</LessonSubtitle>
+						<LessonImage src="/assets/School/Alerts/General/2Alerts.png" />
+						On the other hand if you choose Hype as the Alert type you'll have the option to fill in Filters for this specific Alert.
 						<br />
-						The Reaction configuration button will allow you to change the configuration that you setup when creating the Reaction
-						<SmallLessonImage src="/assets/School/Chat/Reactions/4Reactions.png" style={{ width: '100px' }} />
-						We can also change the duration of the Reaction using the slider
-						<br />
-						There is a toggle switch to turn the Reaction on or off for chat to use
-						<br />
-						This switch is handy if you have a Reaction that you don't want chat to use, but you would like to use it internally.
-						<br />
-						An example of this is using the Reaction only on your Streamdeck
-						<br />
-						<br />
-						The next section is the tier list that determines who is allowed to use this Reaction
-						<br />
-						If you've changed your Friendly name for a tier it will show here
-						<br />
-						<br />
-						<br />
-						Now onto the Chat Reaction Settings
-						<LessonImage src="/assets/School/Chat/Reactions/5Reactions.png" />
-						<h2>Listen</h2>
-						The first option will toggle all Reactions on or off
-						<br />
-						When off no Chat Reaction Commands will be triggered
+						You can read more about <b>Filters</b> in the <Link to="/school/studio/hypes">Studio Hypes lesson</Link>
 						<br />
 						<br />
 						<br />
-						That wraps up Chat Reactions, now that you've created a Reaction it will update througout Lumia Stream.
+						That wraps up Alerts.
 						<br />
 						<br />
 						<div>Next on the list is <Link to={nextUp.path}><NiceButton>{nextUp.name}</NiceButton></Link></div>
