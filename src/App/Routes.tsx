@@ -13,6 +13,7 @@ import LegacyOverlay from './Containers/Legacy/Overlay/legacy-overlay';
 import Overlay from './Containers/Overlay/overlay';
 import SchoolHome from './Containers/School/school-home';
 import videoList from './Containers/Videos/video-list';
+import changelog from './Containers/Changelog/changelog';
 
 const Routes = () => (
 	<Switch>
@@ -26,6 +27,7 @@ const Routes = () => (
 		<Route path='/overlay' component={Overlay} />
 		<Route path='/school' component={SchoolHome} />
 		<Route path='/videos' component={videoList} />
+		<Route path='/releases' component={changelog} />
 		{/* Legacy */}
 		<Route path='/legacy/download' component={LegacyDownload} />
 		<Route path='/legacy/overlay' component={LegacyOverlay} />

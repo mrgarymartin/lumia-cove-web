@@ -42,7 +42,7 @@ class SchoolStreamdeckGeneral extends React.Component<any> {
 						<SmallLessonImage style={{ width: '40%' }} src="/assets/School/Streamdeck/4Streamdeck.png" />
 						You will now have the ability to drag the Plugin over into any Streamdeck slot you choose.
 						<br />
-						This will give you the ability to enter a Title and Type should show up.
+						This will give you the ability to enter a Title and Type should show upr.
 						<SmallLessonImage style={{ width: '40%' }} src="/assets/School/Streamdeck/5Streamdeck.png" />
 						<br />
 						If Type does not show up, it means that it wasn't able to connect to Lumia Stream.

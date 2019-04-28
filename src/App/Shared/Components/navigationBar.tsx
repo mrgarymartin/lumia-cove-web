@@ -55,6 +55,9 @@ class NavigationBar extends React.Component<any> {
 					<NavLinks>
 						<Link to="/school">School</Link>
 					</NavLinks>
+					<NavLinks>
+						<Link to="/releases">Releases</Link>
+					</NavLinks>
 					{username
 						? <NavAuth onClick={this.clickedNavAuth}>
 								{avatar
