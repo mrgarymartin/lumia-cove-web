@@ -13,7 +13,7 @@ class SchoolChatGeneral extends React.Component<any> {
 			<LessonPage>
 				<LessonHeadContain>
 					<LessonHead>
-						<LessonTitle><LogoImage style={{ marginRight: '20px' }} className="logo-image" src="/assets/StreamLogo.png" />Studio</LessonTitle>
+						<LessonTitle><LogoImage style={{ marginRight: '20px' }} className="logo-image" src="/assets/StreamLogo.png" />Chat</LessonTitle>
 						<Button onClick={() => this.props.history.push(nextUp.path)}>Next Lesson ></Button>
 					</LessonHead>
 					<LessonHeaderRow />

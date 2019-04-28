@@ -5,33 +5,29 @@ import { LessonPage, LessonHeadContain, LessonHead, LessonTitle, LessonHeaderRow
 import { LogoImage } from '../../../../Shared/Styles/s_navigation-bar';
 import { Button, NiceButton } from '../../../../Shared/Styles/s_buttons';
 
-const nextUp = require('../../school-order.json').lightsGeneral;
+const nextUp = require('../../school-order.json').hotkeysGeneral;
 
-class SchoolAlertsGeneral extends React.Component<any> {
+class SchoolStreamdeckGeneral extends React.Component<any> {
 	render() {
 		return (
 			<LessonPage>
 				<LessonHeadContain>
 					<LessonHead>
-						<LessonTitle><LogoImage style={{ marginRight: '20px' }} className="logo-image" src="/assets/StreamLogo.png" />Alerts</LessonTitle>
+						<LessonTitle><LogoImage style={{ marginRight: '20px' }} className="logo-image" src="/assets/StreamLogo.png" />Streamdeck</LessonTitle>
 						<Button onClick={() => this.props.history.push(nextUp.path)}>Next Lesson ></Button>
 					</LessonHead>
 					<LessonHeaderRow />
 				</LessonHeadContain>
 				<LessonBody>
 					<LessonOverview>
-						<h3>Now we're going to be talking about Alerts.</h3>
+						<h3>With the Streamdeck you'll have the ability to trigger your commands with a click of a button.</h3>
 						<br />
-						<h3>Alerts is most likely what you came for. It is the heart and soul of Lumia Stream</h3>
-						<LessonImage src="/assets/School/Alerts/General/1Alerts.png" />
+						<LessonSubtitle>Setup</LessonSubtitle>
+						To setup Streamdeck let's first head to Settings -> General.
 						<br />
+						Under Streamdeck Api, make sure the <b>Enable</b> button is On.
 						<br />
-						Navigate to Alerts -> (Site) -> (Type)
-						<br />
-						You'll be brought to a handful of settings you can choose from
-						<br />
-						<LessonSubtitle>Listen</LessonSubtitle>
-						This will determine if this specific Alert should be listened to or not.
+						Next up let's connect our Streamdeck to our computer and then open up the Streamdeck software.
 						<br />
 						<LessonSubtitle>Preference</LessonSubtitle>
 						Preference will give you the option to choose from either the native site or a platform.
@@ -73,4 +69,4 @@ class SchoolAlertsGeneral extends React.Component<any> {
 	}
 }
 
-export default withRouter(connect<any, any, any>(null, null)(SchoolAlertsGeneral));
+export default withRouter(connect<any, any, any>(null, null)(SchoolStreamdeckGeneral));

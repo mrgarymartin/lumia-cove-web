@@ -4,23 +4,10 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import { SchoolPage, SchoolSidebar, SidebarLink, LogoSchoolContain, SettingParent, ParentAlone, LeftParent, SettingIcon, ChildrenSettings, SettingAlone } from './s_school-home';
 import schoolTroubleshooting from './Components/school-troubleshooting';
-import schoolHueModes from './Components/school-hue-modes';
-import schoolShortcutMenu from './Components/school-shortcut-menu';
-import schoolOverlay from './Components/school-overlay';
-import schoolHotkeys from './Components/school-hotkeys';
-import schoolAccessories from './Components/school-accessories';
-import schoolThingamabot from './Components/school-thingamabot';
-import schoolDefaultLights from './Components/school-default-lights';
-import schoolFuze from './Components/Studio/school-studio-fuze';
-import schoolHypes from './Components/Studio/school-studio-hypes';
-import schoolReactions from './Components/Studio/school-studio-reactions';
-import schoolScenes from './Components/Studio/school-studio-scenes';
 import schoolAlerts from './Components/Alerts/school-alerts';
-import schoolChat from './Components/Chat/school-chat-general';
-import schoolStudio from './Components/Studio/school-studio-general';
 import schoolOverview from './Components/school-overview';
 import { LogoContain, LogoImage } from '../../Shared/Styles/s_navigation-bar';
-import { FaPlus, FaMinus, FaPaintBrush } from 'react-icons/fa';
+import { FaPlus, FaMinus, FaPaintBrush, FaBell, FaLightbulb } from 'react-icons/fa';
 import schoolStudioGeneral from './Components/Studio/school-studio-general';
 import schoolStudioFuze from './Components/Studio/school-studio-fuze';
 import schoolStudioHypes from './Components/Studio/school-studio-hypes';
@@ -34,6 +21,15 @@ import schoolStudioScenes from './Components/Studio/school-studio-scenes';
 import schoolChatScenes from './Components/Chat/school-chat-scenes';
 import schoolChatReactions from './Components/Chat/school-chat-reactions';
 import schoolChatInteractives from './Components/Chat/school-chat-interactives';
+import { IoIosChatbubbles } from 'react-icons/io';
+import schoolLightsGeneral from './Components/Lights/school-lights-general';
+import schoolLightsDefault from './Components/Lights/school-lights-default';
+import schoolAccessoriesGeneral from './Components/Accessories/school-accessories';
+import schoolStreamdeckGeneral from './Components/Streamdeck/school-streamdeck';
+import schoolHotkeysGeneral from './Components/Hotkeys/school-hotkeys';
+import schoolThingamabotGeneral from './Components/Thingamabot/school-thingamabot';
+import schoolOverlayGeneral from './Components/Overlays/school-overlay';
+import schoolShortcutGeneral from './Components/Shortcuts/school-shortcut';
 
 class SchoolHome extends React.Component<any> {
 	state = {
@@ -111,7 +107,7 @@ class SchoolHome extends React.Component<any> {
 
 					{/* Chat */}
 					<SettingParent>
-						<ParentAlone onClick={() => this.openParent('chat')} isPath={pathname.startsWith('/school/chat')}><LeftParent><SettingIcon><FaPaintBrush /></SettingIcon>Chat</LeftParent>
+						<ParentAlone onClick={() => this.openParent('chat')} isPath={pathname.startsWith('/school/chat')}><LeftParent><SettingIcon><IoIosChatbubbles /></SettingIcon>Chat</LeftParent>
 							{isOpen.chat ? <FaMinus style={{ marginLeft: '5px' }} /> : <FaPlus style={{ marginLeft: '5px' }} />}
 						</ParentAlone>
 						{isOpen.chat &&
@@ -126,10 +122,12 @@ class SchoolHome extends React.Component<any> {
 							</ChildrenSettings>
 						}
 					</SettingParent>
+
+					<SidebarLink to='/school/alerts'><SettingAlone isPath={pathname === '/school/alerts'}><SettingIcon><FaBell /></SettingIcon>Alerts</SettingAlone></SidebarLink>
 					
 					{/* Lights */}
 					<SettingParent>
-						<ParentAlone onClick={() => this.openParent('lights')} isPath={pathname.startsWith('/school/lights')}><LeftParent><SettingIcon><FaPaintBrush /></SettingIcon>Lights</LeftParent>
+						<ParentAlone onClick={() => this.openParent('lights')} isPath={pathname.startsWith('/school/lights')}><LeftParent><SettingIcon><FaLightbulb /></SettingIcon>Lights</LeftParent>
 							{isOpen.lights ? <FaMinus style={{ marginLeft: '5px' }} /> : <FaPlus style={{ marginLeft: '5px' }} />}
 						</ParentAlone>
 						{isOpen.lights &&
@@ -143,10 +141,9 @@ class SchoolHome extends React.Component<any> {
 					<SidebarLink to='/school/accessories'>Accessories</SidebarLink>
 					<SidebarLink to='/school/streamdeck'>Streamdeck</SidebarLink>
 
-					<SidebarLink to='/school/alerts'>Alerts</SidebarLink>
-					<SidebarLink to='/school/thingamabot'>Thingamabot</SidebarLink>
 					<SidebarLink to='/school/hotkeys'>Hot keys</SidebarLink>
-					<SidebarLink to='/school/overlay'>Overlays</SidebarLink>
+					<SidebarLink to='/school/thingamabot'>Thingamabot</SidebarLink>
+					<SidebarLink to='/school/overlays'>Overlays</SidebarLink>
 					<SidebarLink to='/school/shortcut-menu'>Shortcut menu</SidebarLink>
 					{/* <SidebarLink to='/school/tips'>Tips</SidebarLink> */}
 					{/* <SidebarLink to='/school/troubleshoot'>Troubleshooting</SidebarLink> */}
@@ -157,7 +154,7 @@ class SchoolHome extends React.Component<any> {
 
 						{/* Studio */}
 						<Route path='/school/studio/general' component={schoolStudioGeneral} />
-						<Route path='/school/studio/scenes' component={schoolScenes} />
+						<Route path='/school/studio/scenes' component={schoolStudioScenes} />
 						<Route path='/school/studio/reactions' component={schoolStudioReactions} />
 						<Route path='/school/studio/hypes' component={schoolStudioHypes} />
 						<Route path='/school/studio/animations' component={schoolStudioAnimations} />
@@ -176,35 +173,30 @@ class SchoolHome extends React.Component<any> {
 						<Route path='/school/alerts' component={schoolAlerts} />
 
 						{/* Lights */}
-
+						<Route path='/school/lights/general' component={schoolLightsGeneral} />
+						<Route path='/school/lights/default' component={schoolLightsDefault} />
 
 						{/* Accessories */}
-
+						<Route path='/school/accessories' component={schoolAccessoriesGeneral} />
 
 						{/* Streamdeck */}
-
+						<Route path='/school/streamdeck' component={schoolStreamdeckGeneral} />
 
 						{/* Hot Keys */}
-
+						<Route path='/school/hotkeys' component={schoolHotkeysGeneral} />
 
 						{/* Thingamabot */}
-
+						<Route path='/school/thingamabot' component={schoolThingamabotGeneral} />
 
 						{/* Overlays */}
-
+						<Route path='/school/overlays' component={schoolOverlayGeneral} />
 
 						{/* Shortcut Menu */}
+						<Route path='/school/shortcut-menu' component={schoolShortcutGeneral} />
 
 
 						{/* FAQ */}
 						
-						<Route path='/school/default-lights' component={schoolDefaultLights} />
-						<Route path='/school/thingamabot' component={schoolThingamabot} />
-						<Route path='/school/accessories' component={schoolAccessories} />
-						<Route path='/school/hotkeys' component={schoolHotkeys} />
-						<Route path='/school/overlay' component={schoolOverlay} />
-						<Route path='/school/shortcut-menu' component={schoolShortcutMenu} />
-						<Route path='/school/hue-modes' component={schoolHueModes} />
 						<Route path='/school/troubleshoot' component={schoolTroubleshooting} />
 						<Redirect from='/school' to='/school/overview' />
 						<Redirect from='/school/**' to='/school/overview' />

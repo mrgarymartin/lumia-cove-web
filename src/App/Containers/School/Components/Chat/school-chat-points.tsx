@@ -13,7 +13,7 @@ class SchoolChatPoints extends React.Component<any> {
 			<LessonPage style={{ paddingTop: '50px' }}>
 				<LessonHeadContain>
 					<LessonHead>
-						<LessonTitle><LogoImage style={{ marginRight: '20px' }} className="logo-image" src="/assets/StreamLogo.png" />Tiers</LessonTitle>
+						<LessonTitle><LogoImage style={{ marginRight: '20px' }} className="logo-image" src="/assets/StreamLogo.png" />Points</LessonTitle>
 						<Button onClick={() => this.props.history.push(nextUp.path)}>Next Lesson ></Button>
 					</LessonHead>
 					<LessonHeaderRow />

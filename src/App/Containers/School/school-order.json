@@ -13,5 +13,13 @@
 	"chatScenes": {"name": "Chat Scenes", "path": "/school/chat/scenes"},
 	"chatReactions": {"name": "Chat Reactions", "path": "/school/chat/reactions"},
 	"chatInteractives": {"name": "Chat Interactives", "path": "/school/chat/interactives"},
-	"alertsGeneral": {"name": "Alerts", "path": "/school/alerts"}
+	"alertsGeneral": {"name": "Alerts", "path": "/school/alerts"},
+	"lightsGeneral": {"name": "Lights", "path": "/school/lights/general"},
+	"lightsDefault": {"name": "Default Lights", "path": "/school/lights/default"},
+	"accessoriesGeneral": {"name": "Accessories", "path": "/school/accessories"},
+	"streamdeckGeneral": {"name": "Stream Deck", "path": "/school/streamdeck"},
+	"hotkeysGeneral": {"name": "HotKeys", "path": "/school/hotkeys"},
+	"thingamabotGeneral": {"name": "Thingamabot", "path": "/school/thingamabot"},
+	"overlaysGeneral": {"name": "Overlays", "path": "/school/overlays"},
+	"shortcutGeneral": {"name": "Shortcut Menu", "path": "/school/shortcut-menu"}
 }
