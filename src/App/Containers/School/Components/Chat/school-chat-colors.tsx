@@ -58,7 +58,7 @@ class SchoolChatColors extends React.Component<any> {
 						<br />
 						This switch is handy if you have a color that you don't want chat to use, but you would like to use it internally.
 						<br />
-						An example of this is using the color only on your Streamdeck
+						An example of this is using the color only on your Stream Deck
 						<br />
 						<br />
 						The next section is the tier list that determines who is allowed to use this color

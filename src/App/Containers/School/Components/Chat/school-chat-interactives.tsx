@@ -59,7 +59,7 @@ class SchoolChatInteractives
 						<br />
 						This switch is handy if you have a Interactive that you don't want chat to use, but you would like to use it internally.
 						<br />
-						An example of this is using the Interactive only on your Streamdeck
+						An example of this is using the Interactive only on your Stream Deck
 						<br />
 						<br />
 						The next section is the tier list that determines who is allowed to use this Interactive

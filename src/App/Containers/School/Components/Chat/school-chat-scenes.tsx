@@ -43,12 +43,12 @@ class SchoolChatScenes extends React.Component<any> {
 						<br />
 						<br />
 						If we zoom into our newly created Scene we'll see the name at the top of our Scene.
-						<SmallLessonImage src="/assets/School/Chat/Scenes/3Scenes.png" style={{ width: '100px' }} />
+						<SmallLessonImage src="/assets/School/Chat/Scenes/3Scenes.png" style={{ width: '10%' }} />
 						There is a toggle switch to turn the Scene on or off for chat to use.
 						<br />
 						This switch is handy if you have a Scene that you don't want chat to use, but you would like to use it internally.
 						<br />
-						An example of this is using the Scene only on your Streamdeck.
+						An example of this is using the Scene only on your Stream Deck.
 						<br />
 						<br />
 						The next section is the tier list that determines who is allowed to use this Scene.

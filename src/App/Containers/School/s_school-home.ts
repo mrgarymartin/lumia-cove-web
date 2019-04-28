@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import Colors from '../../Shared/Styles/colors';
 import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const theme = 'dark';
 
@@ -139,4 +140,14 @@ export const LessonImage: any = styled.img`
 
 export const SmallLessonImage: any = styled(LessonImage)`
 	width: 200px;
+`;
+
+export const SchoolLink: any = styled(Link)`
+	text-decoration: underline !important;
+	color: ${Colors.callToAction[theme]};
+`;
+
+export const UnderlineLink: any = styled.a`
+	text-decoration: underline !important;
+	color: ${Colors.callToAction[theme]};
 `;

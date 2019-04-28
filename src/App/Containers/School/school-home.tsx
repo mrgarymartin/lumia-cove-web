@@ -139,7 +139,7 @@ class SchoolHome extends React.Component<any> {
 					</SettingParent>
 
 					<SidebarLink to='/school/accessories'>Accessories</SidebarLink>
-					<SidebarLink to='/school/streamdeck'>Streamdeck</SidebarLink>
+					<SidebarLink to='/school/streamdeck'>Stream Deck</SidebarLink>
 
 					<SidebarLink to='/school/hotkeys'>Hot keys</SidebarLink>
 					<SidebarLink to='/school/thingamabot'>Thingamabot</SidebarLink>
