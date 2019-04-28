@@ -18,7 +18,7 @@ const StreamHome = ({ history }) => (
 			{/* <div className="video-holder demo" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', border: 'solid 1px white' }}> */}
 			<div className="video-holder demo" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
 				{/* Promo Video Coming Soon */}
-				<iframe width="100%" height="100%" src="https://www.youtube.com/embed/Hgdk-pk1XlQ?modestbranding=1&amp;title=" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+				<iframe width="100%" height="100%" src="https://www.youtube.com/embed/Ich7E4pidrM?modestbranding=1&amp;title=" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
 				{/* <video width="100%" height="100%" controls>
 					<source src="/assets/promos/Lumia-Overlay.mp4"  type="video/mp4" />
 				</video> */}
