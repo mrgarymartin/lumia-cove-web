@@ -5,7 +5,7 @@ import { LessonPage, LessonHeadContain, LessonHead, LessonTitle, LessonHeaderRow
 import { LogoImage } from '../../../../Shared/Styles/s_navigation-bar';
 import { Button, NiceButton } from '../../../../Shared/Styles/s_buttons';
 
-const nextUp = require('../../school-order.json').chatPoints;
+const nextUp = require('../../school-order.json').chatColors;
 
 class SchoolStudioTiers extends React.Component<any> {
 	render() {

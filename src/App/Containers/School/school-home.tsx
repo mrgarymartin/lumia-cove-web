@@ -114,7 +114,7 @@ class SchoolHome extends React.Component<any> {
 							<ChildrenSettings>
 								<SidebarLink to='/school/chat/general'><SettingAlone isPath={pathname === '/school/chat/general'}>General</SettingAlone></SidebarLink>
 								<SidebarLink to='/school/chat/tiers'><SettingAlone isPath={pathname === '/school/chat/tiers'}>Tiers</SettingAlone></SidebarLink>
-								<SidebarLink to='/school/chat/points'><SettingAlone isPath={pathname === '/school/chat/points'}>Points</SettingAlone></SidebarLink>
+								{/* <SidebarLink to='/school/chat/points'><SettingAlone isPath={pathname === '/school/chat/points'}>Points</SettingAlone></SidebarLink> */}
 								<SidebarLink to='/school/chat/colors'><SettingAlone isPath={pathname === '/school/chat/colors'}>Colors</SettingAlone></SidebarLink>
 								<SidebarLink to='/school/chat/scenes'><SettingAlone isPath={pathname === '/school/chat/scenes'}>Scenes</SettingAlone></SidebarLink>
 								<SidebarLink to='/school/chat/reactions'><SettingAlone isPath={pathname === '/school/chat/reactions'}>Reactions</SettingAlone></SidebarLink>
