@@ -32,7 +32,7 @@ class Account extends React.Component<any, any> {
 	getSubscriptionInfo = async () => {
 		try {
 			// Get a client token for authorization from your server
-			const response = await getRequest(`subscription/info`);
+			const response = await getRequest(`subscription/info`, { Authorization: `Bearer ${this.props.auth.token}`});
 			console.log('response: ', response.data);
 			if (response.data) {
 				const linkedPlan = LumiaPlans.find((plan) => plan.link === response.data.braintree_plan);
@@ -52,7 +52,7 @@ class Account extends React.Component<any, any> {
 		this.setState({ loading: true });
 
 		try {
-			const response = await getRequest(`subscription/resume`);
+			const response = await getRequest(`subscription/resume`, { Authorization: `Bearer ${this.props.auth.token}`});
 			console.log('response: ', response.data);
 			this.getSubscriptionInfo();
 		} catch (err) {
@@ -67,7 +67,7 @@ class Account extends React.Component<any, any> {
 			this.setState({ loading: true });
 
 			try {
-				const response = await getRequest(`subscription/cancel`);
+				const response = await getRequest(`subscription/cancel`, { Authorization: `Bearer ${this.props.auth.token}`});
 				console.log('response: ', response.data);
 				this.getSubscriptionInfo();
 			} catch (err) {
